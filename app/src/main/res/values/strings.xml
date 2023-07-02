@@ -10,4 +10,11 @@
     <string name="label_keuntungan_rate_card">Keuntungan Rate Card</string>
     <string name="description_keuntungan_rate_card">• Bisa ketemu creator favoritmu secara pribadi\n• 1 on 1 meeting\n• Jadwal fleksibel\n• Durasi sebanyak yang kamu mau\n</string>
     <string name="label_Beli_Rate_Card_sekarang">Beli Rate Card sekarang</string>
+    <string name="title_onboard">Bebagai sesi menarik untukmu</string>
+    <string name="sub_title_onboard">Silahkan pilih tipe akun yang sesuai untukmu!</string>
+    <string name="audiens">Audiens</string>
+    <string name="kreator">Kreator</string>
+    <string name="desc_audiens">Mulai ngobrol dengan kreator</string>
+    <string name="desc_kreator">Mulai ngobrol dengan audiens</string>
+
 </resources>
