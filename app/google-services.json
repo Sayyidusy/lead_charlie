@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "799903278447",
+    "project_id": "lead-charlie",
+    "storage_bucket": "lead-charlie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799903278447:android:ba392a3d50f98cc0de749a",
+        "android_client_info": {
+          "package_name": "com.example.charlie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799903278447-ktjnvn5ncnbeosid4ao3co3oukfj4igr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKzgrOMUQKZZbPC6CoTl6rDfIXJMX7PZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799903278447-ktjnvn5ncnbeosid4ao3co3oukfj4igr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
