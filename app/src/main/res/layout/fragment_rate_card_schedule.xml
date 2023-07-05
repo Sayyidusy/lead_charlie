@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.rate_card_schedule.RateCardScheduleFragment">
+
+    <TextView
+        android:id="@+id/tv_RateCard"
+        style="@style/TextAppearance.Dinotis.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:text="@string/rate_card"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ib_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_90dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_RateCard"
+        app:layout_constraintEnd_toStartOf="@id/tv_RateCard"
+        app:layout_constraintTop_toTopOf="@id/tv_RateCard"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_rate_card_image"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginHorizontal="@dimen/margin_24dp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_RateCard">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_rate_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/container_darkgrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            style="@style/TextAppearance.Dinotis.Body.Small.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:text="@string/dummy_text"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_rate_card" />
+
+        <TextView
+            android:id="@+id/tv_jenis"
+            style="@style/TextAppearance.Dinotis.Body.Large.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_4dp"
+            android:text="@string/dummy_text"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/tv_nama"
+            app:layout_constraintStart_toStartOf="@id/tv_nama" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextAppearance.Dinotis.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_24dp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:text="@string/dummy_text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_rate_card_image" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_24dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:text="@string/dummy_text_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_rate_card_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_13dp"
+        android:src="@drawable/time"
+        app:layout_constraintStart_toStartOf="@+id/tv_desc"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/TextAppearance.Dinotis.Body.Small.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:text="@string/dummy_time"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/iv_rate_card_schedule"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+    <TextView
+        android:id="@+id/tv_menit"
+        style="@style/TextAppearance.Dinotis.Body.Small.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:text="@string/menit"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/tv_time"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnv_rate_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_time"
+        app:menu="@menu/menu_schedule" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_rate_card_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/bnv_rate_card"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

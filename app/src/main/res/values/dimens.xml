@@ -58,6 +58,8 @@
     <dimen name="text_36sp">36sp</dimen>
     <dimen name="text_8sp">8sp</dimen>
     <dimen name="text_10sp">10sp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
 
 
 </resources>

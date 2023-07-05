@@ -2,7 +2,8 @@
 <resources>
     <color name="purple">#A449FF</color>
     <color name="light_blue">#5ADFF7</color>
-    <color name="grey">#4DD9D9D9</color>
+    <color name="grey">#80CACCCF</color>
+    <color name="darkgrey">#CACCCF</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gradient_start">#A142FE</color>

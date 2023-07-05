@@ -16,5 +16,11 @@
     <string name="label_kreator">Kreator</string>
     <string name="desc_audiens">Mulai ngobrol dengan kreator</string>
     <string name="desc_kreator">Mulai ngobrol dengan audiens</string>
+    <string name="dummy_text">lorem_ipsum</string>
+    <string name="dummy_text_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et luctus leo, quis aliquam est. Fusce at arcu ligula. Nullam in mauris ac sapien suscipit egestas. Aliquam erat volutpat. Pellentesque tristique congue nibh, eget aliquet neque faucibus non. Aenean eu odio ultrices, euismod orci nec, sollicitudin ligula. Vestibulum id convallis turpis.</string>
+    <string name="dummy_time">20</string>
+    <string name="menit">menit</string>
+    <string name="label_jadwal_tersedia">Jadwal Tersedia</string>
+    <string name="item_request_jadwal">Request Jadwal</string>
 
 </resources>

@@ -3,16 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/rateCardScheduleFragment">
 
     <fragment
         android:id="@+id/bannerRateCardFragment"
-        android:name="com.example.charlie.ui.BannerRateCardFragment"
+        android:name="com.example.charlie.ui.banner_rate_card.RateCardBannerFragment"
         android:label="fragment_banner_rate_card"
         tools:layout="@layout/fragment_banner_rate_card" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.charlie.ui.LoginFragment"
+        android:name="com.example.charlie.ui.authentication.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/rateCardScheduleFragment"
+        android:name="com.example.charlie.ui.rate_card_schedule.RateCardScheduleFragment"
+        android:label="RateCardScheduleFragment" />
 </navigation>

@@ -14,11 +14,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".ui.BannerRateCardFragment">
+            tools:context=".ui.banner_rate_card.RateCardBannerFragment">
 
             <TextView
                 android:id="@+id/tv_RateCard"
-                style="@style/TextAppearance.Dinotis.Headline.Reguler"
+                style="@style/TextAppearance.Dinotis.Headline3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_30dp"
@@ -88,11 +88,12 @@
 
                 <TextView
                     android:id="@+id/tv_label_description_rate_card"
-                    style="@style/TextAppearance.Dinotis.LabelSmall.Regular"
+                    style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_12dp"
                     android:layout_marginBottom="@dimen/margin_10dp"
+                    android:fontFamily="@font/lexend_semibold"
                     android:text="@string/label_description_rate_card"
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toTopOf="@id/tv_description_rate_card"
@@ -102,7 +103,7 @@
 
                 <TextView
                     android:id="@+id/tv_description_rate_card"
-                    style="@style/TextAppearance.Dinotis.LabelSmall.Regular"
+                    style="@style/TextAppearance.Dinotis.Body.Small.Regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_44dp"
@@ -139,7 +140,7 @@
 
                 <TextView
                     android:id="@+id/tv_label_cara_pakai"
-                    style="@style/TextAppearance.Dinotis.LabelSmall.Regular"
+                    style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_12dp"
@@ -153,7 +154,7 @@
 
                 <TextView
                     android:id="@+id/tv_description_cara_pakai_rate_card"
-                    style="@style/TextAppearance.Dinotis.LabelSmall.Regular"
+                    style="@style/TextAppearance.Dinotis.Body.Small.Regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_44dp"
@@ -190,7 +191,7 @@
 
                 <TextView
                     android:id="@+id/tv_label_keuntungan_rate_card"
-                    style="@style/TextAppearance.Dinotis.LabelSmall.Regular"
+                    style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_12dp"
@@ -204,7 +205,7 @@
 
                 <TextView
                     android:id="@+id/tv_description_keuntungan_rate_card"
-                    style="@style/TextAppearance.Dinotis.LabelSmall.Regular"
+                    style="@style/TextAppearance.Dinotis.Body.Small.Regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_44dp"
