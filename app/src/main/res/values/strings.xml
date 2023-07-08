@@ -21,6 +21,12 @@
     <string name="dummy_time">20</string>
     <string name="menit">menit</string>
     <string name="label_jadwal_tersedia">Jadwal Tersedia</string>
-    <string name="item_request_jadwal">Request Jadwal</string>
+    <string name="label_request_jadwal">Request Jadwal</string>
+    <string name="label_tanggal">Tanggal</string>
+    <string name="label_jam">Jam</string>
+    <string name="label_pilih_tanggal">Pilih Tanggal</string>
+    <string name="colon">:</string>
+    <string name="default_jam_00">00</string>
+    <string name="default_menit_00">00</string>
 
 </resources>

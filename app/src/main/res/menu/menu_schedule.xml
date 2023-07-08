@@ -6,6 +6,6 @@
         android:title="@string/label_jadwal_tersedia" />
     <item
         android:id="@+id/item_request_jadwal"
-        android:title="@string/item_request_jadwal" />
+        android:title="@string/label_request_jadwal" />
 
 </menu>
