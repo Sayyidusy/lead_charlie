@@ -18,8 +18,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    viewBinding{
-        enabled = true
+
+    buildFeatures{
+        viewBinding = true
     }
 
     buildTypes {
@@ -35,7 +36,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    viewBinding
 }
 
 dependencies {
