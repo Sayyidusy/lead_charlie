@@ -14,7 +14,7 @@
         android:id="@+id/loginFragment"
         android:name="com.example.charlie.ui.authentication.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_onboard" />
     <fragment
         android:id="@+id/rateCardScheduleFragment"
         android:name="com.example.charlie.ui.rate_card_schedule.RateCardScheduleFragment"
