@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.banner_rate_card.RateCardBannerFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -13,8 +14,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".ui.banner_rate_card.RateCardBannerFragment">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/tv_RateCard"
@@ -43,14 +43,14 @@
                 android:id="@+id/ib_banner"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_180dp"
-                android:scaleType="fitXY"
                 android:layout_marginHorizontal="@dimen/margin_12dp"
                 android:layout_marginTop="@dimen/margin_85dp"
                 android:background="@color/white"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner_rate_card_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/banner_rate_card_2"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_title_banner"
@@ -230,10 +230,10 @@
                 android:text="@string/label_Beli_Rate_Card_sekarang"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/cl_keuntungan_rate_card"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_keuntungan_rate_card" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

@@ -3,20 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/rateCardScheduleFragment">
-
+    app:startDestination="@id/onBoardActivity">
+    <activity
+        android:id="@+id/onBoardActivity"
+        android:name="com.example.charlie.OnBoardActivity"
+        android:label="activity_onboard"
+        tools:layout="@layout/activity_onboard" />
+    <activity
+        android:id="@+id/loginActivity2"
+        android:name="com.example.charlie.ui.authentication.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.charlie.ui.authentication.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
     <fragment
-        android:id="@+id/bannerRateCardFragment"
+        android:id="@+id/rateCardBannerFragment"
         android:name="com.example.charlie.ui.banner_rate_card.RateCardBannerFragment"
         android:label="fragment_banner_rate_card"
-        tools:layout="@layout/fragment_banner_rate_card" />
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.charlie.ui.authentication.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/activity_onboard" />
+        tools:layout="@layout/fragment_banner_rate_card" >
+        <action
+            android:id="@+id/action_rateCardBannerFragment_to_rateCardScheduleFragment"
+            app:destination="@id/rateCardScheduleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/rateCardScheduleFragment"
         android:name="com.example.charlie.ui.rate_card_schedule.RateCardScheduleFragment"
-        android:label="RateCardScheduleFragment" />
+        android:label="fragment_rate_card_schedule"
+        tools:layout="@layout/fragment_rate_card_schedule" />
 </navigation>
