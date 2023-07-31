@@ -29,6 +29,7 @@ class KreatorProfileFragment : Fragment() {
         setupPager()
     }
 
+
     private fun setupPager() {
         binding.apply {
             vpKreatorProfile.adapter = KreatorProfilePagerAdapter(childFragmentManager, lifecycle)

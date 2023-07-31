@@ -37,14 +37,9 @@
         android:id="@+id/kreatorProfileFragment"
         android:name="com.example.charlie.ui.kreator_profile.KreatorProfileFragment"
         android:label="fragment_kreator_profile"
-        tools:layout="@layout/fragment_kreator_profile" />
-    <fragment
-        android:id="@+id/layananFragment"
-        android:name="com.example.charlie.ui.kreator_profile.layanan.LayananFragment"
-        android:label="fragment_layanan"
-        tools:layout="@layout/fragment_layanan" >
+        tools:layout="@layout/fragment_kreator_profile" >
         <action
-            android:id="@+id/action_layananFragment_to_rateCardBannerFragment"
+            android:id="@+id/action_kreatorProfileFragment_to_rateCardBannerFragment3"
             app:destination="@id/rateCardBannerFragment" />
     </fragment>
 

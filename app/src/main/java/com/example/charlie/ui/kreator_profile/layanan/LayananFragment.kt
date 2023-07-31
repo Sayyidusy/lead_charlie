@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.charlie.R
 import com.example.charlie.databinding.FragmentLayananBinding
+import com.example.charlie.ui.kreator_profile.KreatorProfileFragmentDirections
 
 class LayananFragment : Fragment() {
     private var _binding : FragmentLayananBinding? = null
@@ -32,7 +33,7 @@ class LayananFragment : Fragment() {
     }
 
     private fun navigateToRateCardBanner() {
-        val direction = LayananFragmentDirections.actionLayananFragmentToRateCardBannerFragment()
+        val direction = KreatorProfileFragmentDirections.actionKreatorProfileFragmentToRateCardBannerFragment3()
         findNavController().navigate(direction)
     }
 
