@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/onBoardActivity">
+    app:startDestination="@id/kreatorProfileFragment">
     <activity
         android:id="@+id/onBoardActivity"
         android:name="com.example.charlie.OnBoardActivity"
@@ -20,17 +20,32 @@
         android:label="activity_register"
         tools:layout="@layout/activity_register" />
     <fragment
+        android:id="@+id/rateCardScheduleFragment"
+        android:name="com.example.charlie.ui.rate_card_schedule.RateCardScheduleFragment"
+        android:label="fragment_rate_card_schedule"
+        tools:layout="@layout/fragment_rate_card_schedule" />
+    <fragment
         android:id="@+id/rateCardBannerFragment"
         android:name="com.example.charlie.ui.banner_rate_card.RateCardBannerFragment"
         android:label="fragment_banner_rate_card"
-        tools:layout="@layout/fragment_banner_rate_card" >
+        tools:layout="@layout/fragment_banner_rate_card">
         <action
             android:id="@+id/action_rateCardBannerFragment_to_rateCardScheduleFragment"
             app:destination="@id/rateCardScheduleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/rateCardScheduleFragment"
-        android:name="com.example.charlie.ui.rate_card_schedule.RateCardScheduleFragment"
-        android:label="fragment_rate_card_schedule"
-        tools:layout="@layout/fragment_rate_card_schedule" />
+        android:id="@+id/kreatorProfileFragment"
+        android:name="com.example.charlie.ui.kreator_profile.KreatorProfileFragment"
+        android:label="fragment_kreator_profile"
+        tools:layout="@layout/fragment_kreator_profile" />
+    <fragment
+        android:id="@+id/layananFragment"
+        android:name="com.example.charlie.ui.kreator_profile.layanan.LayananFragment"
+        android:label="fragment_layanan"
+        tools:layout="@layout/fragment_layanan" >
+        <action
+            android:id="@+id/action_layananFragment_to_rateCardBannerFragment"
+            app:destination="@id/rateCardBannerFragment" />
+    </fragment>
+
 </navigation>

@@ -19,7 +19,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_tanggal"
-        style="@style/TextAppearance.Dinotis.Body.Small.Regular"
+        style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_22dp"

@@ -1,23 +1,25 @@
-package com.example.charlie.ui.rate_card_schedule
+package com.example.charlie.ui.kreator_profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.charlie.databinding.FragmentRateCardScheduleBinding
-import com.example.charlie.ui.rate_card_schedule.adapter.RateCardPagerAdapter
+import androidx.navigation.fragment.findNavController
+import com.example.charlie.databinding.FragmentKreatorProfileBinding
+import com.example.charlie.ui.kreator_profile.adapter.KreatorProfilePagerAdapter
 import com.google.android.material.tabs.TabLayout
 
-class RateCardScheduleFragment : Fragment() {
-    private var _binding: FragmentRateCardScheduleBinding? = null
+class KreatorProfileFragment : Fragment() {
+    private var _binding: FragmentKreatorProfileBinding? = null
 
     private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentRateCardScheduleBinding.inflate(layoutInflater)
+    ): View? {
+        _binding = FragmentKreatorProfileBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -29,22 +31,22 @@ class RateCardScheduleFragment : Fragment() {
 
     private fun setupPager() {
         binding.apply {
-            vpRateCardSchedule.adapter = RateCardPagerAdapter(childFragmentManager, lifecycle)
-            tlRateCard.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            vpKreatorProfile.adapter = KreatorProfilePagerAdapter(childFragmentManager, lifecycle)
+            tlKreatorProfile.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
                 override fun onTabSelected(tab: TabLayout.Tab) {
-                    vpRateCardSchedule.currentItem = tab.position
+                    vpKreatorProfile.currentItem = tab.position
                 }
 
                 override fun onTabUnselected(tab: TabLayout.Tab?) {
-//                    vpRateCardSchedule.currentItem = tab!!.position
+                    vpKreatorProfile.currentItem = tab!!.position
                 }
 
                 override fun onTabReselected(tab: TabLayout.Tab?) {
-//                    vpRateCardSchedule.currentItem = tab!!.position
+                    vpKreatorProfile.currentItem = tab!!.position
                 }
-
             })
         }
     }
+
 
 }

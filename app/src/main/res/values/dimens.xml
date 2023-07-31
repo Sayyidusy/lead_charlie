@@ -66,6 +66,9 @@
     <dimen name="margin_5dp">5dp</dimen>
     <dimen name="text_13sp">13sp</dimen>
     <dimen name="margin_28dp">28dp</dimen>
+    <dimen name="text_34sp">34sp</dimen>
+    <dimen name="text_28sp">28sp</dimen>
+    <dimen name="margin_9dp">9dp</dimen>
 
 
 </resources>

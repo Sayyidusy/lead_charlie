@@ -1,4 +1,4 @@
-package com.example.charlie.ui.banner_rate_card
+package com.example.charlie.ui.kreator_profile.layanan
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,17 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.charlie.databinding.FragmentBannerRateCardBinding
+import com.example.charlie.R
+import com.example.charlie.databinding.FragmentLayananBinding
 
-class RateCardBannerFragment : Fragment() {
-    private var _binding : FragmentBannerRateCardBinding? = null
+class LayananFragment : Fragment() {
+    private var _binding : FragmentLayananBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentBannerRateCardBinding.inflate(layoutInflater)
+        _binding = FragmentLayananBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -24,17 +25,15 @@ class RateCardBannerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            btnBeliRateCard.setOnClickListener {
-                navigateToRateCardSchedule()
+            ibBanner.setOnClickListener{
+                navigateToRateCardBanner()
             }
         }
-
     }
 
-    private fun navigateToRateCardSchedule() {
-        val direction = RateCardBannerFragmentDirections.actionRateCardBannerFragmentToRateCardScheduleFragment()
+    private fun navigateToRateCardBanner() {
+        val direction = LayananFragmentDirections.actionLayananFragmentToRateCardBannerFragment()
         findNavController().navigate(direction)
     }
-
 
 }

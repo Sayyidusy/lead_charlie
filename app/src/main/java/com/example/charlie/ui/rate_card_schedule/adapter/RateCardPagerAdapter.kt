@@ -7,7 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.charlie.ui.rate_card_schedule.jadwal_tersedia.JadwalTersediaFragment
 import com.example.charlie.ui.rate_card_schedule.request_jadwal.RequestJadwalFragment
 
-class PagerAdapter(fm: FragmentManager, lifecycle: Lifecycle) :
+class RateCardPagerAdapter(fm: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fm, lifecycle) {
     override fun getItemCount(): Int {
         return 2

@@ -40,7 +40,7 @@
         android:layout_marginTop="@dimen/margin_28dp"
         android:layout_marginBottom="@dimen/margin_8dp"
         android:text="@string/sub_title_onboard"
-        android:textAppearance="@style/TextAppearance.Dinotis.Body.VerySmall.SemiBold"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@id/cl_audiens"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,6 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_8dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_arrow1"
             app:layout_constraintStart_toEndOf="@id/iv_audiens"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -85,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_audiens"
-                android:textAppearance="@style/TextAppearance.Dinotis.LabelMedium.Bold"
+                android:textAppearance="@style/TextAppearance.Dinotis.Body.Large.Bold"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -95,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/desc_audiens"
-                android:textAppearance="@style/TextAppearance.Dinotis.Body.VerySmall.Regular"
+                android:textAppearance="@style/TextAppearance.Dinotis.Body.VerySmall.Reguler"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_label_audiens"
@@ -147,6 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_8dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_arrow2"
             app:layout_constraintStart_toEndOf="@id/iv_kreator"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -155,7 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_kreator"
-                android:textAppearance="@style/TextAppearance.Dinotis.LabelMedium.Bold"
+                android:textAppearance="@style/TextAppearance.Dinotis.Body.Large.Bold"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -165,7 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/desc_kreator"
-                android:textAppearance="@style/TextAppearance.Dinotis.Body.VerySmall.Regular"
+                android:textAppearance="@style/TextAppearance.Dinotis.Body.VerySmall.Reguler"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_label_kreator"

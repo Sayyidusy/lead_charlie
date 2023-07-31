@@ -50,7 +50,7 @@
 
         <TextView
             android:id="@+id/tv_nama"
-            style="@style/TextAppearance.Dinotis.Body.Small.Regular"
+            style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_16dp"
@@ -106,7 +106,7 @@
 
     <TextView
         android:id="@+id/tv_time"
-        style="@style/TextAppearance.Dinotis.Body.Small.Regular"
+        style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_8dp"
@@ -118,7 +118,7 @@
 
     <TextView
         android:id="@+id/tv_menit"
-        style="@style/TextAppearance.Dinotis.Body.Small.Regular"
+        style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_4dp"
