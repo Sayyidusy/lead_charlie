@@ -1,241 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".ui.banner_rate_card.RateCardBannerFragment">
 
-    <androidx.core.widget.NestedScrollView
+    <TextView
+        android:id="@+id/tv_RateCard"
+        style="@style/TextAppearance.Dinotis.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:text="@string/rate_card"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ib_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_90dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_RateCard"
+        app:layout_constraintEnd_toStartOf="@+id/tv_RateCard"
+        app:layout_constraintTop_toTopOf="@+id/tv_RateCard"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+
+    <ImageView
+        android:id="@+id/iv_banner"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="@dimen/height_180dp"
+        android:layout_marginHorizontal="@dimen/margin_12dp"
+        android:layout_marginTop="@dimen/margin_85dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/banner_rate_card_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_title_banner"
+        style="@style/TextAppearance.Dinotis.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:text="@string/title_banner"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_banner" />
 
-            <TextView
-                android:id="@+id/tv_RateCard"
-                style="@style/TextAppearance.Dinotis.Headline3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_30dp"
-                android:text="@string/rate_card"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_deskripsi_rate_card"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="@dimen/margin_15dp"
+        android:background="@drawable/container_purple"
+        android:drawableStart="@drawable/ic_description"
+        android:drawableEnd="@drawable/arrow_right_purple"
+        android:drawablePadding="@dimen/margin_20dp"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/black"
+        android:paddingHorizontal="@dimen/margin_15dp"
+        android:paddingVertical="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_18dp"
+        android:text="@string/label_description_rate_card"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_banner" />
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/ib_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/margin_90dp"
-                android:background="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_RateCard"
-                app:layout_constraintEnd_toStartOf="@+id/tv_RateCard"
-                app:layout_constraintTop_toTopOf="@+id/tv_RateCard"
-                app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cara_pakai_rate_card"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="@dimen/margin_15dp"
+        android:background="@drawable/container_purple"
+        android:drawableStart="@drawable/ic_cara_pakai"
+        android:drawableEnd="@drawable/arrow_right_purple"
+        android:drawablePadding="@dimen/margin_20dp"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/black"
+        android:paddingHorizontal="@dimen/margin_15dp"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="@dimen/margin_20dp"
+        android:text="@string/label_cara_pakai"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_deskripsi_rate_card" />
 
-            <ImageView
-                android:id="@+id/iv_banner"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/height_180dp"
-                android:layout_marginHorizontal="@dimen/margin_12dp"
-                android:layout_marginTop="@dimen/margin_85dp"
-                android:background="@color/white"
-                android:scaleType="fitXY"
-                android:src="@drawable/banner_rate_card_2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_keuntungan_rate_card"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="@dimen/margin_15dp"
+        android:background="@drawable/container_purple"
+        android:drawableStart="@drawable/ic_keuntungan"
+        android:drawableEnd="@drawable/arrow_right_purple"
+        android:drawablePadding="@dimen/margin_20dp"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:paddingHorizontal="@dimen/margin_15dp"
+        android:paddingVertical="@dimen/margin_20dp"
+        android:text="@string/label_keuntungan_rate_card"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_cara_pakai_rate_card" />
 
-            <TextView
-                android:id="@+id/tv_title_banner"
-                style="@style/TextAppearance.Dinotis.Headline4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_16dp"
-                android:text="@string/title_banner"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_banner" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_beli_rate_card"
+        style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_30dp"
+        android:layout_marginHorizontal="@dimen/margin_15dp"
+        android:background="@drawable/button_background_purple"
+        android:text="@string/label_Beli_Rate_Card_sekarang"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_description_rate_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_12dp"
-                android:layout_marginTop="@dimen/margin_14dp"
-                android:background="@drawable/container_grey"
-                android:padding="@dimen/margin_18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_title_banner">
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/iv_description_rate_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_description"
-                    app:layout_constraintEnd_toStartOf="@id/tv_label_description_rate_card"
-                    app:layout_constraintHorizontal_chainStyle="spread_inside"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_label_description_rate_card"
-                    style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_12dp"
-                    android:layout_marginBottom="@dimen/margin_10dp"
-                    android:fontFamily="@font/lexend_semibold"
-                    android:text="@string/label_description_rate_card"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toTopOf="@id/tv_description_rate_card"
-                    app:layout_constraintStart_toEndOf="@id/iv_description_rate_card"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/tv_description_rate_card"
-                    style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_44dp"
-                    android:text="@string/description_rate_card"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_label_description_rate_card" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_cara_pakai_rate_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_12dp"
-                android:layout_marginTop="@dimen/margin_20dp"
-                android:background="@drawable/container_grey"
-                android:padding="@dimen/margin_18dp"
-                app:layout_constraintEnd_toEndOf="@+id/cl_description_rate_card"
-                app:layout_constraintStart_toStartOf="@+id/cl_description_rate_card"
-                app:layout_constraintTop_toBottomOf="@id/cl_description_rate_card">
-
-                <ImageView
-                    android:id="@+id/iv_cara_pakai_rate_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_cara_pakai"
-                    app:layout_constraintEnd_toStartOf="@id/tv_label_cara_pakai"
-                    app:layout_constraintHorizontal_chainStyle="spread_inside"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_label_cara_pakai"
-                    style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_12dp"
-                    android:layout_marginBottom="@dimen/margin_10dp"
-                    android:text="@string/label_cara_pakai"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toTopOf="@id/tv_description_cara_pakai_rate_card"
-                    app:layout_constraintStart_toEndOf="@id/iv_cara_pakai_rate_card"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/tv_description_cara_pakai_rate_card"
-                    style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_44dp"
-                    android:text="@string/description_cara_pakai"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_label_cara_pakai" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_keuntungan_rate_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_12dp"
-                android:layout_marginTop="@dimen/margin_20dp"
-                android:background="@drawable/container_grey"
-                android:padding="@dimen/margin_18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cl_cara_pakai_rate_card">
-
-                <ImageView
-                    android:id="@+id/iv_keuntungan_rate_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_keuntungan"
-                    app:layout_constraintEnd_toStartOf="@id/tv_label_keuntungan_rate_card"
-                    app:layout_constraintHorizontal_chainStyle="spread_inside"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_label_keuntungan_rate_card"
-                    style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_12dp"
-                    android:layout_marginBottom="@dimen/margin_10dp"
-                    android:text="@string/label_keuntungan_rate_card"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toTopOf="@id/tv_description_keuntungan_rate_card"
-                    app:layout_constraintStart_toEndOf="@id/iv_keuntungan_rate_card"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/tv_description_keuntungan_rate_card"
-                    style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_44dp"
-                    android:text="@string/description_keuntungan_rate_card"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_label_keuntungan_rate_card" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_beli_rate_card"
-                style="@style/TextAppearance.Dinotis.Headline4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/margin_30dp"
-                android:background="@drawable/button_background_purple"
-                android:paddingHorizontal="@dimen/margin_44dp"
-                android:paddingVertical="@dimen/margin_16dp"
-                android:text="@string/label_Beli_Rate_Card_sekarang"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cl_keuntungan_rate_card" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>

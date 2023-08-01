@@ -6,9 +6,9 @@
     <string name="label_description_rate_card">Deskripsi Rate card</string>
     <string name="description_rate_card">Rate Card adalah sesi terjadwal untuk private call dengan jadwal sesuai kesepakatan Kreator dan Audiens</string>
     <string name="label_cara_pakai">Cara Pakai</string>
-    <string name="description_cara_pakai">1. Pilih Kreator\n2. Lihat jadwal. Kreator sudah menyediakan jadwal, tetapi kamu masih bisa memilih\n3. Jika kamu memilih jadwal yang telah disediakan, checkout\n4. Jika kamu milih jadwal secara custom, lakukan checkout, tunggu untuk diacc kreator\n5. Kamu bisa membayar rate card pilihanmu!\n</string>
+    <string name="description_cara_pakai">1. Pilih Kreator\n2. Lihat jadwal. Kreator sudah menyediakan jadwal, tetapi kamu masih bisa memilih\n3. Jika kamu memilih jadwal yang telah disediakan, checkout\n4. Jika kamu milih jadwal secara custom, lakukan checkout, tunggu untuk diterima kreator\n5. Kamu bisa membayar rate card pilihanmu!\n6. Ratecard kini dapat digunakan</string>
     <string name="label_keuntungan_rate_card">Keuntungan Rate Card</string>
-    <string name="description_keuntungan_rate_card">• Bisa ketemu creator favoritmu secara pribadi\n• 1 on 1 meeting\n• Jadwal fleksibel\n• Durasi sebanyak yang kamu mau\n</string>
+    <string name="description_keuntungan_rate_card">• Bisa ketemu creator favoritmu secara pribadi\n• 1 on 1 meeting\n• Jadwal fleksibel\n• Durasi sebanyak yang kamu mau\nBicarakan topik dengan lebih intens</string>
     <string name="label_Beli_Rate_Card_sekarang">Beli Rate Card sekarang</string>
     <string name="title_onboard">Bebagai sesi menarik untukmu</string>
     <string name="sub_title_onboard">Silahkan pilih tipe akun yang sesuai untukmu!</string>
@@ -41,5 +41,6 @@
     <string name="label_informasi">Informasi</string>
     <string name="label_layanan">Layanan</string>
     <string name="label_ulasan">Ulasan</string>
+    <string name="label_booking">Booking</string>
 
 </resources>

@@ -69,6 +69,10 @@
     <dimen name="text_34sp">34sp</dimen>
     <dimen name="text_28sp">28sp</dimen>
     <dimen name="margin_9dp">9dp</dimen>
+    <dimen name="corner_30dp">30dp</dimen>
+    <dimen name="margin_250dp">250dp</dimen>
+    <dimen name="margin_200dp">200dp</dimen>
+    <dimen name="corner_8dp">8dp</dimen>
 
 
 </resources>

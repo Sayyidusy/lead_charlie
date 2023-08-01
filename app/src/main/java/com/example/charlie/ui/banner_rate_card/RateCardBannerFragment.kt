@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.charlie.databinding.FragmentBannerRateCardBinding
+import com.example.charlie.ui.banner_rate_card.cara_pakai.CaraPakaiFragment
+import com.example.charlie.ui.banner_rate_card.deskripsi.DeskripsiFragment
+import com.example.charlie.ui.banner_rate_card.keuntungan.KeuntunganFragment
 
 class RateCardBannerFragment : Fragment() {
     private var _binding : FragmentBannerRateCardBinding? = null
@@ -26,6 +29,15 @@ class RateCardBannerFragment : Fragment() {
         binding.apply {
             btnBeliRateCard.setOnClickListener {
                 navigateToRateCardSchedule()
+            }
+            btnDeskripsiRateCard.setOnClickListener {
+                DeskripsiFragment().show(childFragmentManager, "DeskripsiFragment")
+            }
+            btnKeuntunganRateCard.setOnClickListener {
+                KeuntunganFragment().show(childFragmentManager, "KeuntunganFragment")
+            }
+            btnCaraPakaiRateCard.setOnClickListener {
+                CaraPakaiFragment().show(childFragmentManager, "CaraPakaiFragment")
             }
         }
 
