@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_90dp"
-        android:background="@drawable/container_white"
+        android:background="@drawable/container_circle_white"
         android:padding="@dimen/margin_10dp"
         android:src="@drawable/arrow_back"
         app:layout_constraintBottom_toBottomOf="@id/tv_kreator_name"
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_4dp"
-        android:src="@drawable/check_1"
+        android:src="@drawable/ic_check"
         app:layout_constraintBottom_toBottomOf="@id/tv_kreator_full_name"
         app:layout_constraintStart_toEndOf="@id/tv_kreator_full_name"
         app:layout_constraintTop_toTopOf="@+id/tv_kreator_full_name" />
@@ -112,6 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dummy_sesi"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
         app:layout_constraintEnd_toEndOf="@+id/tv_label_sesi"
         app:layout_constraintStart_toStartOf="@id/tv_label_sesi"
         app:layout_constraintTop_toBottomOf="@id/tv_label_sesi" />
@@ -131,6 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dummy_pengikut"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
         app:layout_constraintEnd_toEndOf="@+id/tv_label_pengikut"
         app:layout_constraintStart_toStartOf="@id/tv_label_pengikut"
         app:layout_constraintTop_toBottomOf="@id/tv_label_pengikut" />
@@ -160,6 +162,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dummy_penilaian"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
         app:layout_constraintEnd_toEndOf="@+id/tv_label_penilaian"
         app:layout_constraintStart_toEndOf="@id/iv_star"
         app:layout_constraintTop_toBottomOf="@id/tv_label_penilaian" />
@@ -199,10 +202,10 @@
         android:id="@+id/vp_kreator_profile"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tl_kreator_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tl_kreator_profile" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

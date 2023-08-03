@@ -42,5 +42,9 @@
     <string name="label_layanan">Layanan</string>
     <string name="label_ulasan">Ulasan</string>
     <string name="label_booking">Booking</string>
+    <string name="label_private_video_call">Private Video Call</string>
+    <string name="label_durasi_60_menit">Durasi 60 Menit</string>
+    <string name="label_rp">Rp</string>
+    <string name="default_rp">000</string>
 
 </resources>

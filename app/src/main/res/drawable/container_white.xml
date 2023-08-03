@@ -1,5 +1,12 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <corners android:radius="@dimen/corner_10dp"/>
-    <solid android:color="@color/white"/> <!-- Menambahkan atribut solid untuk mengatur latar belakang menjadi abu-abu -->
+    android:shape="rectangle">
+    <corners android:radius="@dimen/corner_14dp" />
+    <solid android:color="@color/white" />
 </shape>
+
+
+
+
+
+
+

@@ -73,6 +73,8 @@
     <dimen name="margin_250dp">250dp</dimen>
     <dimen name="margin_200dp">200dp</dimen>
     <dimen name="corner_8dp">8dp</dimen>
+    <dimen name="corner_12dp">12dp</dimen>
+    <dimen name="corner_14dp">14dp</dimen>
 
 
 </resources>
