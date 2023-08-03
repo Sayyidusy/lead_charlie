@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/tv_kreator_name"
-        style="@style/TextAppearance.Dinotis.Headline5."
+        style="@style/TextAppearance.Dinotis.Headline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_30dp"

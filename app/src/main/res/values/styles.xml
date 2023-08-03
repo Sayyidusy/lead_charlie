@@ -16,7 +16,7 @@
         <item name="fontFamily">@font/roboto_bold</item>
         <item name="android:textSize">@dimen/text_20sp</item>
     </style>
-    <style name="TextAppearance.Dinotis.Headline5." parent="TextAppearance.Material3.LabelMedium">
+    <style name="TextAppearance.Dinotis.Headline5" parent="TextAppearance.Material3.LabelMedium">
         <item name="fontFamily">@font/roboto_bold</item>
         <item name="android:textSize">@dimen/text_18sp</item>
     </style>
