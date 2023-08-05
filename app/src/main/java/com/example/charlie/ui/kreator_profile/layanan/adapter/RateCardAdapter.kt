@@ -1,0 +1,21 @@
+package com.example.charlie.ui.kreator_profile.layanan.adapter
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.ListAdapter
+import com.example.charlie.data.model.RateCard
+import com.example.charlie.databinding.ItemRateCardBinding
+
+class RateCardAdapter : ListAdapter<RateCard, RateCardViewHolder>(RateCardDiffUtil()) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RateCardViewHolder {
+        return RateCardViewHolder(
+            ItemRateCardBinding.inflate(
+                LayoutInflater.from(parent.context)
+            )
+        )
+    }
+
+    override fun onBindViewHolder(holder: RateCardViewHolder, position: Int) {
+        holder.bind(getItem(position))
+    }
+}

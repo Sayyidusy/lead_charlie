@@ -1,0 +1,116 @@
+Index: app/src/main/res/layout/fragment_login.xml
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_login.xml b/app/src/main/res/layout/fragment_login.xml
+--- a/app/src/main/res/layout/fragment_login.xml	
++++ b/app/src/main/res/layout/fragment_login.xml	
+@@ -13,38 +13,37 @@
+         android:layout_height="wrap_content"
+         android:layout_marginTop="16dp"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:srcCompat="@drawable/onboard_img" />
+ 
+     <TextView
+         android:id="@+id/tv_title_onboard"
+-        android:layout_width="wrap_content"
++        android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+-        android:layout_marginLeft="37dp"
++        android:layout_marginStart="@dimen/margin_24dp"
++        android:layout_marginEnd="@dimen/margin_64dp"
+         android:layout_marginTop="16dp"
+-        android:layout_marginRight="37dp"
+         android:text="@string/title_onboard"
++        android:textAppearance="@style/TextAppearance.Dinotis.Headline3"
+         android:textSize="@dimen/text_30sp"
+-        android:textStyle="bold"
++        android:textColor="@color/black"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.0"
+-        app:layout_constraintBottom_toTopOf="@id/tv_sub_title_onboard"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/iv_onboard" />
+ 
+     <TextView
+         android:id="@+id/tv_sub_title_onboard"
+-        android:layout_width="wrap_content"
++        android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="28dp"
+         android:text="@string/sub_title_onboard"
+-        android:textColor="#808088"
+-        android:textStyle="bold"
++        android:textColor="@color/black"
++        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
++        android:textSize="@dimen/text_13sp"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.286"
+         app:layout_constraintStart_toStartOf="parent"
++        android:layout_marginHorizontal="@dimen/margin_24dp"
+         app:layout_constraintBottom_toTopOf="@id/cl_audiens"
+         app:layout_constraintTop_toBottomOf="@+id/tv_title_onboard" />
+ 
+@@ -53,7 +52,7 @@
+         android:id="@+id/cl_audiens"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+-        android:layout_marginHorizontal="@dimen/margin_32dp"
++        android:layout_marginHorizontal="@dimen/margin_24dp"
+         android:background="@drawable/audiens_shape"
+         android:clickable="true"
+         android:focusable="true"
+@@ -89,7 +88,8 @@
+                 android:layout_height="wrap_content"
+                 android:text="@string/label_audiens"
+                 android:textColor="@color/white"
+-                android:textSize="@dimen/text_36sp"
++                style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
++                android:textSize="@dimen/text_26sp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+ 
+@@ -98,6 +98,7 @@
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/desc_audiens"
++                android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Regular"
+                 android:textSize="@dimen/text_10sp"
+                 android:textColor="@color/white"
+                 app:layout_constraintBottom_toBottomOf="parent"
+@@ -124,7 +125,7 @@
+         android:id="@+id/cl_kreator"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+-        android:layout_marginHorizontal="@dimen/margin_32dp"
++        android:layout_marginHorizontal="@dimen/margin_24dp"
+         android:background="@drawable/kreator_shape"
+         android:clickable="true"
+         android:focusable="true"
+@@ -150,7 +151,6 @@
+             android:layout_height="wrap_content"
+             android:layout_marginStart="@dimen/margin_8dp"
+             app:layout_constraintBottom_toBottomOf="parent"
+-
+             app:layout_constraintStart_toEndOf="@id/iv_kreator"
+             app:layout_constraintTop_toTopOf="parent">
+ 
+@@ -160,7 +160,8 @@
+                 android:layout_height="wrap_content"
+                 android:text="@string/label_kreator"
+                 android:textColor="@color/white"
+-                android:textSize="@dimen/text_36sp"
++                style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
++                android:textSize="@dimen/text_26sp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+ 
+@@ -169,6 +170,7 @@
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/desc_kreator"
++                android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Regular"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/text_10sp"
+                 app:layout_constraintBottom_toBottomOf="parent"
