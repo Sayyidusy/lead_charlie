@@ -27,9 +27,9 @@ class RateCardBannerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            btnBeliRateCard.setOnClickListener {
-                navigateToRateCardSchedule()
-            }
+//            btnBeliRateCard.setOnClickListener {
+//                navigateToRateCardSchedule()
+//            }
             btnDeskripsiRateCard.setOnClickListener {
                 DeskripsiFragment().show(childFragmentManager, "DeskripsiFragment")
             }
@@ -43,10 +43,10 @@ class RateCardBannerFragment : Fragment() {
 
     }
 
-    private fun navigateToRateCardSchedule() {
-        val direction = RateCardBannerFragmentDirections.actionRateCardBannerFragmentToRateCardScheduleFragment()
-        findNavController().navigate(direction)
-    }
+//    private fun navigateToRateCardSchedule() {
+//        val direction = RateCardBannerFragmentDirections.actionRateCardBannerFragmentToRateCardScheduleFragment()
+//        findNavController().navigate(direction)
+//    }
 
 
 }

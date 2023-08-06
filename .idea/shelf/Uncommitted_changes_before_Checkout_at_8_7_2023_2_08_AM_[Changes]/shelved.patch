@@ -1,0 +1,14 @@
+Index: app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/adapter/RateCardAdapter.kt
+===================================================================
+diff --git a/app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/adapter/RateCardAdapter.kt b/app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/adapter/RateCardAdapter.kt
+--- a/app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/adapter/RateCardAdapter.kt	
++++ b/app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/adapter/RateCardAdapter.kt	
+@@ -10,7 +10,7 @@
+     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RateCardViewHolder {
+         return RateCardViewHolder(
+             ItemRateCardBinding.inflate(
+-                LayoutInflater.from(parent.context)
++                LayoutInflater.from(parent.context),parent,false
+             )
+         )
+     }
