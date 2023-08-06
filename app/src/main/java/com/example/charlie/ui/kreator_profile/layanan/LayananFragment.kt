@@ -13,6 +13,8 @@ import com.example.charlie.data.model.RateCard
 import com.example.charlie.databinding.FragmentLayananBinding
 import com.example.charlie.ui.kreator_profile.KreatorProfileFragmentDirections
 import com.example.charlie.ui.kreator_profile.layanan.adapter.RateCardAdapter
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class LayananFragment : Fragment() {
     private var _binding: FragmentLayananBinding? = null
@@ -43,6 +45,17 @@ class LayananFragment : Fragment() {
     }
 
     private fun loadData() {
+        val example = hashMapOf(
+            "Test" to "test",
+        )
+
+//        Firebase.firestore.collection("rate_card")
+//            .add(example).addOnSuccessListener { documentReference ->
+//                Log.d("Add","DocumentSnapshot added with ID: ${documentReference.id}")
+//            }.addOnFailureListener { e ->
+//                Log.w("Add","Error adding document", e)
+//            }
+
         RateCardClient().getAllRateCard().addOnSuccessListener {
             val list = arrayListOf<RateCard?>()
             Log.d("LayananFragment", "loadDataQuery: ${it.documents}")
