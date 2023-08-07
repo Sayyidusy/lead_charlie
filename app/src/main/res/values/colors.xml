@@ -7,7 +7,10 @@
     <color name="darkgrey">#CACCCF</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="text_black">#413F48</color>
+    <color name="text_grey">#575757</color>
     <color name="page_color">#FFFAF8FF</color>
+    <color name="page_color_2">#F8F2FF</color>
     <color name="gradient_start">#A142FE</color>
     <color name="gradient_end">#FFFFFD</color>
 </resources>

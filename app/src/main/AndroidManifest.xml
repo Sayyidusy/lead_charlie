@@ -17,7 +17,7 @@
             android:name=".OnBoardActivity"
             android:exported="true">
 
-            <nav-graph android:value="@navigation/main_nav_graph" />
+            <nav-graph android:value="@navigation/audiens_nav_graph" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +27,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ui.authentication.LoginActivity" />
         <activity android:name=".ui.authentication.RegisterActivity" />
-        <activity android:name=".ui.rate_card_schedule.RateCardScheduleActivity" />
+        <activity android:name=".ui.audiens.AudiensActivity" />
+        <activity android:name=".ui.kreator.KreatorActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

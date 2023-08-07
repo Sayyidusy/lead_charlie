@@ -353,7 +353,7 @@
                 android:layout_marginHorizontal="@dimen/margin_22dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/button_background_purple"
+                android:background="@drawable/button_purple"
                 android:text="@string/label_booking"
                 android:textAllCaps="false"
                 android:textColor="@color/white"

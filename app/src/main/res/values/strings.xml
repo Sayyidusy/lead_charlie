@@ -49,5 +49,20 @@
     <string name="label_durasi">Durasi</string>
     <string name="default_durasi">00</string>
     <string name="label_menit">menit</string>
-
+    <string name="label_halo">Halo,</string>
+    <string name="label_saldo_dompet">Saldo Dompet</string>
+    <string name="label_rp4000000">Rp40.000.000</string>
+    <string name="label_tarik_saldo">Tarik Saldo</string>
+    <string name="label_buat_jadwal_sesi">Buat Jadwal Sesi</string>
+    <string name="label_menu_bundling">Menu Bundling</string>
+    <string name="label_menu_rate_card">Menu Rate Card</string>
+    <string name="label_sesi_terjadwal">Sesi Terjadwal</string>
+    <string name="label_permintaan_jadwal">Permintaan Jadwal</string>
+    <string name="requester_name">Jamal Junaedi</string>
+    <string name="label_tanggal_with_colon">Tanggal : </string>
+    <string name="dummy_date">xx/xx/xxxx</string>
+    <string name="label_pukul_with_colon">Pukul : </string>
+    <string name="dummy_xx">xx</string>
+    <string name="label_tolak">Tolak</string>
+    <string name="label_terima">Terima</string>
 </resources>

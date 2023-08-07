@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginHorizontal="@dimen/margin_24dp"
 
-    tools:context=".ui.kreator_profile.layanan.LayananFragment">
+    tools:context=".ui.audiens.kreator_profile.layanan.LayananFragment">
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/ib_banner"

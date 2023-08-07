@@ -75,6 +75,10 @@
     <dimen name="corner_8dp">8dp</dimen>
     <dimen name="corner_12dp">12dp</dimen>
     <dimen name="corner_14dp">14dp</dimen>
+    <dimen name="margin_42dp">42dp</dimen>
+    <dimen name="margin_1dp">1dp</dimen>
+    <dimen name="margin_6dp">6dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
 
 
 </resources>

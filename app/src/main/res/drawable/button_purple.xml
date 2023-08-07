@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <gradient
-        android:startColor="#B500FF"
-        android:centerColor="#A300FF"
-        android:endColor="#8900FF"
-        android:angle="0" />
-    <corners android:radius="8dp" />
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/corner_8dp"/>
+    <solid android:color="#754FB4"/> <!-- Menambahkan atribut solid untuk mengatur latar belakang menjadi abu-abu -->
 </shape>

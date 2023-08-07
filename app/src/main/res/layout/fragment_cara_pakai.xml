@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/margin_200dp"
     android:background="@drawable/bottom_sheet_shape"
-    tools:context=".ui.banner_rate_card.cara_pakai.CaraPakaiFragment">
+    tools:context=".ui.audiens.banner_rate_card.cara_pakai.CaraPakaiFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_label_cara_pakai"

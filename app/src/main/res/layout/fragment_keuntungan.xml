@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/margin_250dp"
     android:background="@drawable/bottom_sheet_shape"
-    tools:context=".ui.banner_rate_card.keuntungan.KeuntunganFragment">
+    tools:context=".ui.audiens.banner_rate_card.keuntungan.KeuntunganFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_label_keuntungan"

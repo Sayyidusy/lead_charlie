@@ -8,15 +8,15 @@
         <item name="fontFamily">@font/roboto_bold</item>
         <item name="android:textSize">@dimen/text_28sp</item>
     </style>
-    <style name="TextAppearance.Dinotis.Headline3" parent="TextAppearance.Material3.BodyLarge">
+    <style name="TextAppearance.Dinotis.Headline3" parent="TextAppearance.Material3.HeadlineLarge">
         <item name="fontFamily">@font/roboto_bold</item>
         <item name="android:textSize">@dimen/text_24sp</item>
     </style>
-    <style name="TextAppearance.Dinotis.Headline4" parent="TextAppearance.Material3.BodyLarge">
+    <style name="TextAppearance.Dinotis.Headline4" parent="TextAppearance.Material3.HeadlineLarge">
         <item name="fontFamily">@font/roboto_bold</item>
         <item name="android:textSize">@dimen/text_20sp</item>
     </style>
-    <style name="TextAppearance.Dinotis.Headline5" parent="TextAppearance.Material3.LabelMedium">
+    <style name="TextAppearance.Dinotis.Headline5" parent="TextAppearance.Material3.HeadlineLarge">
         <item name="fontFamily">@font/roboto_bold</item>
         <item name="android:textSize">@dimen/text_18sp</item>
     </style>
@@ -54,6 +54,52 @@
     </style>
     <style name="TextAppearance.Dinotis.Body.Small.Italic" parent="TextAppearance.Material3.LabelSmall">
         <item name="fontFamily">@font/roboto_italic</item>
+        <item name="android:textSize">@dimen/text_14sp</item>
+    </style>
+
+    // Dinotis Original
+    <style name="TextAppearance.DinotisOriginal.Body.Large.Regular" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.Large.SemiBold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.Large.Bold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.Large.Italic" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_italic</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.VerySmall.Reguler" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/text_12sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.Small.Reguler" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/text_14sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.Small.SemiBold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">@dimen/text_14sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.VerySmall.SemiBold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">@dimen/text_12sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.Small.Bold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/text_14sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.VerySmall.Bold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/text_12sp</item>
+    </style>
+    <style name="TextAppearance.DinotisOriginal.Body.Small.Italic" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_italic</item>
         <item name="android:textSize">@dimen/text_14sp</item>
     </style>
 
