@@ -1,5 +1,6 @@
 package com.example.charlie.ui.kreator.kreator_home.permintaan_jadwal.adapter
 
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.charlie.data.firebase.RateCardClient
 import com.example.charlie.data.model.RateCard
@@ -10,15 +11,46 @@ class RequestViewHolder(val binding: ItemRequestRateCardBinding) : ViewHolder(bi
     fun bind(
         model: RequestRateCard,
     ) {
-        if (model.status == "PENDING") {
-            RateCardClient().getRateCard(model.rate_card_id.toString()).addOnSuccessListener {
-                val rateCard: RateCard = it.toObject(RateCard::class.java)!!
-                binding.apply {
-                    tvTitleRateCard.text = rateCard.title
-                    tvDurasi.text = rateCard.duration.toString()
-                    tvPrice.text = rateCard.price.toString()
-                    tvDate.text = model.date
-                    tvTime.text = model.time
+
+        RateCardClient().getRateCard(model.rate_card_id.toString()).addOnSuccessListener {
+            val rateCard: RateCard = it.toObject(RateCard::class.java)!!
+            binding.apply {
+                tvTitleRateCard.text = rateCard.title
+                tvDurasi.text = rateCard.duration.toString()
+                tvPrice.text = rateCard.price.toString()
+                tvDate.text = model.date
+                tvTime.text = model.time
+                btnTerima.setOnClickListener {
+                    RateCardClient().updateRequestStatus(model.id.toString(), "ACCEPTED")
+                        .addOnSuccessListener {
+                            Toast.makeText(
+                                binding.root.context,
+                                "Permintaan diterima",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }.addOnFailureListener {
+                            Toast.makeText(
+                                binding.root.context,
+                                "Gagal mengubah status",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                }
+                btnTolak.setOnClickListener {
+                    RateCardClient().updateRequestStatus(model.id.toString(), "REJECTED")
+                        .addOnSuccessListener {
+                            Toast.makeText(
+                                binding.root.context,
+                                "Permintaan ditolak",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }.addOnFailureListener {
+                            Toast.makeText(
+                                binding.root.context,
+                                "Gagal mengubah status",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                 }
             }
         }

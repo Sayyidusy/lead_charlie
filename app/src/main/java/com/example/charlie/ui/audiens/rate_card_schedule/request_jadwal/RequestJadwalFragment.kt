@@ -8,10 +8,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.charlie.data.firebase.RateCardClient
+import com.example.charlie.data.model.RequestRateCard
 import com.example.charlie.databinding.FragmentRequestJadwalBinding
 import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 
 class RequestJadwalFragment : Fragment() {
     private var _binding: FragmentRequestJadwalBinding? = null
@@ -34,6 +38,31 @@ class RequestJadwalFragment : Fragment() {
             }
             clWaktu.setOnClickListener {
                 showTimePickerDialog()
+            }
+
+            btnBooking.setOnClickListener {
+                if (!(btnTanggal.text == "Pilih Tanggal")) {
+                    val newRequest = RequestRateCard(
+                        rate_card_id = "ljsFAMfo47FDCBIWyD8C",
+                        date = formatDate(btnTanggal.text.toString()),
+                        time = "${tvJam.text}.${tvMenit.text}",
+                        status = "PENDING"
+                    )
+                    RateCardClient().addRequest(newRequest).addOnSuccessListener {
+                        Toast.makeText(
+                            requireContext(),
+                            "Berhasil booking jadwal",
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    }.addOnFailureListener {
+                        Toast.makeText(requireContext(), "Gagal booking jadwal", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                }else{
+                    Toast.makeText(requireContext(), "Masukkan Tanggal dan Waktu", Toast.LENGTH_SHORT)
+                        .show()
+                }
             }
         }
     }
@@ -129,6 +158,13 @@ class RequestJadwalFragment : Fragment() {
             }
         }
         return "$dayOfMonth $monthString $year"
+    }
+
+    fun formatDate(inputDate: String): String {
+        val inputFormatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale("id", "ID"))
+        val outputFormatter = DateTimeFormatter.ofPattern("d/M/yyyy", Locale("id", "ID"))
+        val date = LocalDate.parse(inputDate, inputFormatter)
+        return outputFormatter.format(date)
     }
 
 }

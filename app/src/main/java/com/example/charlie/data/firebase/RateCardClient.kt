@@ -12,8 +12,8 @@ class RateCardClient {
 
     fun getAllRateCard()= db.collection(COLLECTION_RATE_CARD).get()
     fun getRateCard(id: String) = db.collection(COLLECTION_RATE_CARD).document(id).get()
-    fun getAllRequest() = db.collection(COLLECTION_REQUEST).get()
+    fun getAllRequest() = db.collection(COLLECTION_REQUEST)
     fun getRequest(id: String) = db.collection(COLLECTION_REQUEST).document(id).get()
     fun addRequest(request: RequestRateCard) = db.collection(COLLECTION_REQUEST).add(request)
-    fun updateRequestStatus(id: String,value: String) = db.collection(COLLECTION_REQUEST).document(id).update("Status", value)
+    fun updateRequestStatus(id: String,value: String) = db.collection(COLLECTION_REQUEST).document(id).update("status", value)
 }
