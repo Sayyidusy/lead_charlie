@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.audiens.rate_card_schedule.request_jadwal.RequestJadwalFragment"
     android:layout_height="match_parent">
 
     <androidx.core.widget.NestedScrollView
@@ -105,7 +106,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_beli_rate_card"
+                android:id="@+id/btn_booking"
                 style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

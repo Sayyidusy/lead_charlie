@@ -3,9 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginHorizontal="@dimen/margin_20dp"
-    android:layout_marginTop="@dimen/margin_18dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_request_rate_card"

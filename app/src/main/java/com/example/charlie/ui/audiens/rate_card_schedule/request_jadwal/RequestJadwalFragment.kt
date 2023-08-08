@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.charlie.data.firebase.RateCardClient
 import com.example.charlie.databinding.FragmentRequestJadwalBinding
 import java.time.LocalDate
 
@@ -16,6 +17,7 @@ class RequestJadwalFragment : Fragment() {
     private var _binding: FragmentRequestJadwalBinding? = null
 
     private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
