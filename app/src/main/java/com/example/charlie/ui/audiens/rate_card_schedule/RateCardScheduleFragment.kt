@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.charlie.data.firebase.RateCardClient
 import com.example.charlie.data.model.RateCard
 import com.example.charlie.databinding.FragmentRateCardScheduleBinding
@@ -18,7 +21,7 @@ class RateCardScheduleFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    private val mArgs : RateCardScheduleFragmentArgs by navArgs()
+    private val mArgs: RateCardScheduleFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +49,7 @@ class RateCardScheduleFragment : Fragment() {
                 tvField.text = data.field
                 tvKreatorName.text = data.creator_name
                 tvDuration.text = data.duration.toString()
+                Glide.with(requireContext()).load(data.image).transform(CenterCrop(), RoundedCorners(10)).into(ivRateCard)
             }
         }
     }

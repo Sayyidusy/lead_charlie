@@ -9,8 +9,8 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_kreator_image"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/width_48dp"
+        android:layout_height="@dimen/height_48dp"
         android:layout_marginStart="@dimen/margin_24dp"
         android:layout_marginTop="@dimen/margin_20dp"
         android:background="@drawable/container_circle_white"

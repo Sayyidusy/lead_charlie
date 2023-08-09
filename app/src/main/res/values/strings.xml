@@ -69,4 +69,9 @@
     <string name="label_strip">-</string>
     <string name="label_wib">WIB</string>
     <string name="label_lihat_detail">Lihat Detail</string>
+    <string name="label_detail_video_call">Detail Video Call</string>
+    <string name="label_diskusi_jadwal_bareng_audiens">Diskusi Jadwal Bareng Audiens</string>
+    <string name="label_edit">Edit</string>
+    <string name="label_peserta_private_call">Peserta Private Call</string>
+    <string name="label_mulai_sekarang">Mulai Sekarang</string>
 </resources>

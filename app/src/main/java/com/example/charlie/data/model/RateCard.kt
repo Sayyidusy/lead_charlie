@@ -8,6 +8,7 @@ data class RateCard(
     val field : String? = null,
     val duration: Int? = null,
     val creator_name : String? = null,
+    val image : String? = null,
     val available_dates : List<String>? = null,
     val available_times : List<String>? = null,
 )

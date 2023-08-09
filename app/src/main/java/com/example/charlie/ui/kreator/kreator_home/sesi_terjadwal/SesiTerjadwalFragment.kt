@@ -6,17 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.charlie.data.firebase.RateCardClient
 import com.example.charlie.data.model.RequestRateCard
 import com.example.charlie.databinding.FragmentSesiTerjadwalBinding
+import com.example.charlie.ui.kreator.kreator_home.KreatorHomeFragmentDirections
 import com.example.charlie.ui.kreator.kreator_home.sesi_terjadwal.adapter.SesiTerjadwalAdapter
 
-class SesiTerjadwalFragment : Fragment() {
+class SesiTerjadwalFragment : Fragment(), SesiTerjadwalAdapter.SesiTerjadwalListener {
     private var _binding: FragmentSesiTerjadwalBinding? = null
     private val binding get() = _binding!!
 
-    private val mSesiTerjadwalAdapter: SesiTerjadwalAdapter by lazy { SesiTerjadwalAdapter() }
+    private val mSesiTerjadwalAdapter: SesiTerjadwalAdapter by lazy { SesiTerjadwalAdapter(this) }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,6 +56,11 @@ class SesiTerjadwalFragment : Fragment() {
             rvSesiTerjadwal.adapter = mSesiTerjadwalAdapter
             rvSesiTerjadwal.layoutManager = LinearLayoutManager(requireContext())
         }
+    }
+
+    override fun onItemClicked(data: RequestRateCard) {
+        val direction = KreatorHomeFragmentDirections.actionKreatorHomeFragmentToVideoCallDetailFragment(data.id!!)
+        findNavController().navigate(direction)
     }
 
 }

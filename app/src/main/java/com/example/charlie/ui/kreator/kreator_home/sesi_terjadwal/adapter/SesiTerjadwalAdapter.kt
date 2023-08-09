@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.ListAdapter
 import com.example.charlie.data.model.RequestRateCard
 import com.example.charlie.databinding.ItemSesiTerjadwalBinding
 
-class SesiTerjadwalAdapter:ListAdapter<RequestRateCard,SesiTerjadwalViewHolder>(SesiTerjadwalDiffUtil()) {
+class SesiTerjadwalAdapter(private val listener: SesiTerjadwalListener) :
+    ListAdapter<RequestRateCard, SesiTerjadwalViewHolder>(SesiTerjadwalDiffUtil()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SesiTerjadwalViewHolder {
         return SesiTerjadwalViewHolder(
             ItemSesiTerjadwalBinding.inflate(
@@ -16,6 +17,10 @@ class SesiTerjadwalAdapter:ListAdapter<RequestRateCard,SesiTerjadwalViewHolder>(
     }
 
     override fun onBindViewHolder(holder: SesiTerjadwalViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), listener)
+    }
+
+    interface SesiTerjadwalListener {
+        fun onItemClicked(data: RequestRateCard)
     }
 }

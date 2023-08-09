@@ -43,6 +43,7 @@ class RequestJadwalFragment : Fragment() {
             btnBooking.setOnClickListener {
                 if (!(btnTanggal.text == "Pilih Tanggal")) {
                     val newRequest = RequestRateCard(
+                        //ganti dengan id model rate card yang dipilih
                         rate_card_id = "ljsFAMfo47FDCBIWyD8C",
                         date = formatDate(btnTanggal.text.toString()),
                         time = "${tvJam.text}.${tvMenit.text}",
@@ -95,7 +96,7 @@ class RequestJadwalFragment : Fragment() {
                 }
             },
             tanggalHariIni.year,
-            tanggalHariIni.monthValue,
+            tanggalHariIni.monthValue-1,
             tanggalHariIni.dayOfMonth
         )
         datePickerDialog.show()

@@ -82,6 +82,12 @@
     <dimen name="corner_25dp">25dp</dimen>
     <dimen name="width_34dp">34dp</dimen>
     <dimen name="height_34dp">34dp</dimen>
+    <dimen name="corner_6dp">6dp</dimen>
+    <dimen name="height_70dp">70dp</dimen>
+    <dimen name="height_48dp">48dp</dimen>
+    <dimen name="width_48dp">48dp</dimen>
+    <dimen name="height_40dp">40dp</dimen>
+    <dimen name="width_40dp">40dp</dimen>
 
 
 </resources>
