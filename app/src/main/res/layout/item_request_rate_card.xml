@@ -218,7 +218,7 @@
             android:textSize="@dimen/text_10sp"
             app:layout_constraintEnd_toStartOf="@id/btn_terima"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="@id/tv_label_sesi"
+            app:layout_constraintStart_toStartOf="@+id/tv_label_sesi"
             app:layout_constraintTop_toBottomOf="@id/tv_price" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -235,7 +235,7 @@
             android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.SemiBold"
             android:textColor="@color/white"
             android:textSize="@dimen/text_10sp"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_tolak"
+            app:layout_constraintBottom_toBottomOf="@id/btn_tolak"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_tolak"
             app:layout_constraintTop_toTopOf="@id/btn_tolak" />

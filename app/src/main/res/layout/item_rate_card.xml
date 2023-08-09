@@ -118,7 +118,7 @@
             android:text="@string/label_rp"
             android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Bold"
             android:textColor="#6A4F8F"
-            app:layout_constraintStart_toEndOf="@+id/iv_tag"
+            app:layout_constraintStart_toEndOf="@id/iv_tag"
             app:layout_constraintTop_toBottomOf="@id/tv_label_private_video_call" />
 
         <TextView

@@ -65,4 +65,8 @@
     <string name="dummy_xx">xx</string>
     <string name="label_tolak">Tolak</string>
     <string name="label_terima">Terima</string>
+    <string name="label_1_1_peserta">1/1 Peserta</string>
+    <string name="label_strip">-</string>
+    <string name="label_wib">WIB</string>
+    <string name="label_lihat_detail">Lihat Detail</string>
 </resources>

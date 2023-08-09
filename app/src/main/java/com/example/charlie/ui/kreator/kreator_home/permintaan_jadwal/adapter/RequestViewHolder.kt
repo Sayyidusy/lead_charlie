@@ -11,7 +11,6 @@ class RequestViewHolder(val binding: ItemRequestRateCardBinding) : ViewHolder(bi
     fun bind(
         model: RequestRateCard,
     ) {
-
         RateCardClient().getRateCard(model.rate_card_id.toString()).addOnSuccessListener {
             val rateCard: RateCard = it.toObject(RateCard::class.java)!!
             binding.apply {

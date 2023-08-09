@@ -125,8 +125,8 @@
 
         <ImageView
             android:id="@+id/iv_kreator_video"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="@dimen/width_34dp"
+            android:layout_height="@dimen/height_34dp"
             android:layout_marginStart="@dimen/margin_52dp"
             android:background="@drawable/container_purple"
             android:paddingHorizontal="@dimen/margin_8dp"
@@ -149,8 +149,8 @@
 
         <ImageView
             android:id="@+id/iv_pricetag"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="@dimen/width_34dp"
+            android:layout_height="@dimen/height_34dp"
             android:background="@drawable/container_purple"
             android:padding="@dimen/margin_8dp"
             android:src="@drawable/ic_price_tag_red"
@@ -172,8 +172,8 @@
 
         <ImageView
             android:id="@+id/iv_menu"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="@dimen/width_34dp"
+            android:layout_height="@dimen/height_34dp"
             android:layout_marginEnd="@dimen/margin_52dp"
             android:background="@drawable/container_purple"
             android:padding="@dimen/margin_8dp"

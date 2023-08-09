@@ -79,6 +79,9 @@
     <dimen name="margin_1dp">1dp</dimen>
     <dimen name="margin_6dp">6dp</dimen>
     <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="corner_25dp">25dp</dimen>
+    <dimen name="width_34dp">34dp</dimen>
+    <dimen name="height_34dp">34dp</dimen>
 
 
 </resources>
