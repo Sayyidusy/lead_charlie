@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_rate_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_8dp"
+    android:layout_marginHorizontal="@dimen/margin_24dp"
+    app:cardCornerRadius="@dimen/corner_12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_12dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_icon_red_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_white"
+            android:padding="@dimen/margin_12dp"
+            android:src="@drawable/ic_red_camera_video"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_rate_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:text="@string/dummy_text"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Bold"
+            android:lines="1"
+            tools:text="@tools:sample/lorem/random"
+            android:ellipsize="end"
+            android:textColor="#413F48"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_red_camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_label_private_video_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_private_video_call"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
+            android:textColor="#645F73"
+            android:textSize="@dimen/text_12sp"
+            app:layout_constraintStart_toStartOf="@id/tv_title_rate_card"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_rate_card" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_circle_dark"
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:src="@drawable/circle_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_private_video_call"
+            app:layout_constraintStart_toEndOf="@id/tv_label_private_video_call"
+            app:layout_constraintTop_toTopOf="@id/tv_label_private_video_call" />
+
+        <TextView
+            android:id="@+id/tv_label_durasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:text="@string/label_durasi"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
+            android:textColor="#645F73"
+            android:textSize="@dimen/text_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_private_video_call"
+            app:layout_constraintStart_toEndOf="@id/iv_circle_dark"
+            app:layout_constraintTop_toTopOf="@id/tv_label_private_video_call" />
+
+        <TextView
+            android:id="@+id/tv_durasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:text="@string/default_durasi"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
+            android:textColor="#645F73"
+            android:textSize="@dimen/text_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_private_video_call"
+            app:layout_constraintStart_toEndOf="@id/tv_label_durasi"
+            app:layout_constraintTop_toTopOf="@id/tv_label_private_video_call" />
+
+        <TextView
+            android:id="@+id/tv_label_menit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:text="@string/label_menit"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
+            android:textColor="#645F73"
+            android:textSize="@dimen/text_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_private_video_call"
+            app:layout_constraintStart_toEndOf="@id/tv_durasi"
+            app:layout_constraintTop_toTopOf="@id/tv_label_private_video_call" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tag"
+            app:layout_constraintBottom_toBottomOf="@id/tv_label_rp"
+            app:layout_constraintStart_toStartOf="@+id/tv_label_private_video_call"
+            app:layout_constraintTop_toTopOf="@id/tv_label_rp" />
+
+        <TextView
+            android:id="@+id/tv_label_rp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:text="@string/label_rp"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Bold"
+            android:textColor="#6A4F8F"
+            app:layout_constraintStart_toEndOf="@id/iv_tag"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_private_video_call" />
+
+        <TextView
+            android:id="@+id/tv_rp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_rp"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Bold"
+            android:textColor="#6A4F8F"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_rp"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_rp"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_rp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

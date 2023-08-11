@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.audiens.rate_card_schedule.request_jadwal.RequestJadwalFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_calender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_pilih_hari_tanggal"
+        android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.SemiBold"
+        android:textColor="@color/text_black"
+        android:layout_marginStart="@dimen/margin_10dp"
+        app:layout_constraintStart_toEndOf="@id/iv_calender"
+        app:layout_constraintTop_toTopOf="@id/iv_calender"
+        app:layout_constraintBottom_toBottomOf="@id/iv_calender"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_tanggal"
+        style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:background="@drawable/container_lightgrey"
+        android:paddingHorizontal="@dimen/margin_33dp"
+        android:text="@string/label_pilih_tanggal"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tanggal" />
+
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/iv_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_22dp"
+    android:layout_marginTop="@dimen/margin_20dp"
+    android:src="@drawable/ic_clock"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/btn_tanggal" />
+
+    <TextView
+        android:id="@+id/tv_label_jam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_jam"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.SemiBold"
+        android:textColor="@color/text_black"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_time"
+        app:layout_constraintStart_toEndOf="@+id/iv_time"
+        app:layout_constraintTop_toTopOf="@+id/iv_time" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_waktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@id/btn_booking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_jam"
+        app:layout_constraintVertical_chainStyle="spread_inside">
+
+        <TextView
+            android:id="@+id/tv_jam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_lightgrey"
+            android:paddingHorizontal="@dimen/margin_30dp"
+            android:paddingVertical="@dimen/margin_10dp"
+            android:text="@string/default_jam_00"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.SemiBold"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_colon"
+            style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:text="@string/colon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_menit"
+            app:layout_constraintStart_toEndOf="@id/tv_jam"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_menit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:background="@drawable/container_lightgrey"
+            android:paddingHorizontal="@dimen/margin_30dp"
+            android:paddingVertical="@dimen/margin_10dp"
+            android:text="@string/default_menit_00"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.SemiBold"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_colon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_booking"
+        style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:background="@drawable/button_purple"
+        android:text="@string/label_booking"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_waktu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

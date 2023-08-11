@@ -1,0 +1,97 @@
+Index: app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/LayananFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/LayananFragment.kt b/app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/LayananFragment.kt
+--- a/app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/LayananFragment.kt	
++++ b/app/src/main/java/com/example/charlie/ui/kreator_profile/layanan/LayananFragment.kt	
+@@ -56,7 +56,7 @@
+ //                Log.w("Add","Error adding document", e)
+ //            }
+ 
+-        RateCardClient().getAllRateCard().addOnSuccessListener {
++        Firebase.firestore.collection("rate_card").get().addOnSuccessListener {
+             val list = arrayListOf<RateCard?>()
+             Log.d("LayananFragment", "loadDataQuery: ${it.documents}")
+             it.documents.forEach { doc ->
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	
++++ b/app/src/main/AndroidManifest.xml	
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:tools="http://schemas.android.com/tools">
+-
++<uses-permission android:name="android.permission.INTERNET"/>
+ <application
+     android:allowBackup="true"
+     android:dataExtractionRules="@xml/data_extraction_rules"
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	
++++ b/app/build.gradle	
+@@ -45,7 +45,7 @@
+     //noinspection GradleDependency
+     implementation 'com.google.android.material:material:1.7.0'
+     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+-    implementation 'com.google.firebase:firebase-firestore-ktx:24.6.1'
++    implementation 'com.google.firebase:firebase-firestore-ktx:24.7.0'
+     testImplementation 'junit:junit:4.13.2'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+Index: app/src/main/res/layout/fragment_layanan.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_layanan.xml b/app/src/main/res/layout/fragment_layanan.xml
+--- a/app/src/main/res/layout/fragment_layanan.xml	
++++ b/app/src/main/res/layout/fragment_layanan.xml	
+@@ -4,8 +4,6 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-
+-
+     tools:context=".ui.kreator_profile.layanan.LayananFragment">
+ 
+     <androidx.appcompat.widget.AppCompatImageButton
+@@ -27,7 +25,10 @@
+         android:layout_marginHorizontal="@dimen/margin_24dp"
+         android:layout_marginTop="@dimen/margin_14dp"
+         app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@id/ib_banner" />
++        app:layout_constraintTop_toBottomOf="@id/ib_banner"
++
++        tools:listitem="@layout/item_rate_card" />
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,6 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">

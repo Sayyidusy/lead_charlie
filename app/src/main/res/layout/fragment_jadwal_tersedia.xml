@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.audiens.rate_card_schedule.jadwal_tersedia.JadwalTersediaFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tanggal"
+                app:layout_constraintStart_toStartOf="@+id/rv_day"
+                app:layout_constraintTop_toTopOf="@+id/tv_tanggal"
+                app:srcCompat="@drawable/arrow_left_black" />
+
+            <TextView
+                android:id="@+id/tv_tanggal"
+                style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:text="@string/label_agustus_2023"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ib_back_right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tanggal"
+                app:layout_constraintEnd_toEndOf="@+id/rv_day"
+                app:layout_constraintTop_toTopOf="@+id/tv_tanggal"
+                app:srcCompat="@drawable/arrow_right_black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_tanggal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_20dp"
+                app:spanCount="3"
+                app:layout_constraintTop_toBottomOf="@id/rv_day" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_booking"
+                style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_22dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/button_purple"
+                android:text="@string/label_booking"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_time" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

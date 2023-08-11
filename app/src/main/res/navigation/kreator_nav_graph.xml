@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kreator_nav_graph"
+    app:startDestination="@id/kreatorHomeFragment">
+
+    <fragment
+        android:id="@+id/kreatorHomeFragment"
+        android:name="com.example.charlie.ui.kreator.kreator_home.KreatorHomeFragment"
+        android:label="fragment_kreator_home"
+        tools:layout="@layout/fragment_kreator_home" >
+        <action
+            android:id="@+id/action_kreatorHomeFragment_to_videoCallDetailFragment"
+            app:destination="@id/videoCallDetailFragment"
+            app:popUpTo="@id/kreatorHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoCallDetailFragment"
+        android:name="com.example.charlie.ui.kreator.schedule_detail.VideoCallDetailFragment"
+        android:label="fragment_video_call_detail"
+        tools:layout="@layout/fragment_video_call_detail" >
+        <argument
+            android:name="request_id"
+            app:argType="string" />
+    </fragment>
+</navigation>

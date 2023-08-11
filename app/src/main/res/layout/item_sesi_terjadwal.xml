@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_rate_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_20dp"
+    android:layout_marginTop="@dimen/margin_18dp"
+    app:cardCornerRadius="@dimen/corner_12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_16dp">
+
+        <ImageView
+            android:id="@+id/iv_kreator_video"
+            android:layout_width="@dimen/width_34dp"
+            android:layout_height="@dimen/height_34dp"
+            android:background="@drawable/container_purple"
+            android:paddingHorizontal="@dimen/margin_8dp"
+            android:paddingVertical="@dimen/margin_12dp"
+            android:src="@drawable/ic_red_camera_video_small"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintEnd_toStartOf="@id/iv_dots"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_dots"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_kreator_video"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_kreator_video"
+            app:layout_constraintTop_toTopOf="@+id/iv_kreator_video" />
+
+        <TextView
+            android:id="@+id/tv_title_rate_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Large.Bold"
+            android:textColor="@color/text_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_kreator_video"
+            tools:text="@tools:sample/lorem/random" />
+
+        <TextView
+            android:id="@+id/tv_description_rate_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.Reguler"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/text_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_title_rate_card"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_rate_card"
+            tools:text="@tools:sample/lorem/random" />
+
+
+        <ImageView
+            android:id="@+id/iv_calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintStart_toStartOf="@id/tv_description_rate_card"
+            app:layout_constraintTop_toBottomOf="@id/tv_description_rate_card" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:text="@string/dummy_date"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.Reguler"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_calender"
+            app:layout_constraintStart_toEndOf="@id/iv_calender"
+            app:layout_constraintTop_toTopOf="@id/iv_calender"
+            tools:text="Senin, 12 Januari 2021" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintStart_toStartOf="@id/iv_calender"
+            app:layout_constraintTop_toBottomOf="@id/iv_calender" />
+
+        <TextView
+            android:id="@+id/tv_time_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.Reguler"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_clock"
+            app:layout_constraintStart_toEndOf="@id/iv_clock"
+            app:layout_constraintTop_toTopOf="@id/iv_clock"
+            tools:text="13.00" />
+
+        <TextView
+            android:id="@+id/tv_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:text="@string/label_strip"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.Reguler"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_clock"
+            app:layout_constraintStart_toEndOf="@id/tv_time_start"
+            app:layout_constraintTop_toTopOf="@id/iv_clock" />
+
+        <TextView
+            android:id="@+id/tv_time_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.Reguler"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_clock"
+            app:layout_constraintStart_toEndOf="@id/tv_strip"
+            app:layout_constraintTop_toTopOf="@id/iv_clock"
+            tools:text="14.00" />
+
+        <TextView
+            android:id="@+id/tv_label_wib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:text="@string/label_wib"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.Reguler"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_clock"
+            app:layout_constraintStart_toEndOf="@id/tv_time_end"
+            app:layout_constraintTop_toTopOf="@id/iv_clock" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:src="@drawable/ic_people"
+            app:layout_constraintStart_toStartOf="@id/tv_title_rate_card"
+            app:layout_constraintTop_toBottomOf="@id/iv_clock" />
+
+        <TextView
+            android:id="@+id/tv_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:text="@string/label_1_1_peserta"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.Reguler"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_people"
+            app:layout_constraintStart_toEndOf="@id/iv_people"
+            app:layout_constraintTop_toTopOf="@id/iv_people" />
+
+        <TextView
+            android:id="@+id/tv_label_private_video_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:background="@drawable/container_purple_corner25"
+            android:paddingHorizontal="@dimen/margin_10dp"
+            android:paddingVertical="@dimen/margin_5dp"
+            android:text="@string/label_private_video_call"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.Reguler"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_people"
+            app:layout_constraintStart_toEndOf="@id/tv_people"
+            app:layout_constraintTop_toTopOf="@id/iv_people" />
+
+        <View
+            android:id="@+id/v_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_1dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="#EDEDED"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_private_video_call" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:src="@drawable/ic_money"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintEnd_toStartOf="@id/btn_lihat_detail"
+            app:layout_constraintTop_toBottomOf="@id/v_divider" />
+
+        <TextView
+            android:id="@+id/tv_label_rp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:text="@string/label_rp"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Bold"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_money"
+            app:layout_constraintStart_toEndOf="@id/iv_money"
+            app:layout_constraintTop_toTopOf="@id/iv_money" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_rp"
+            android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Bold"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_money"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_rp"
+            app:layout_constraintTop_toTopOf="@id/iv_money" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_lihat_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_light_purple_outlined"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingHorizontal="@dimen/margin_20dp"
+            android:paddingVertical="@dimen/margin_14dp"
+            android:text="@string/label_lihat_detail"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.VerySmall.SemiBold"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_money"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/iv_money"
+            app:layout_constraintTop_toTopOf="@+id/iv_money" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

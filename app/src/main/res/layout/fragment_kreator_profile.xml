@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_color"
+    tools:context=".ui.audiens.kreator_profile.KreatorProfileFragment">
+
+    <TextView
+        android:id="@+id/tv_kreator_name"
+        style="@style/TextAppearance.Dinotis.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:fontFamily="@font/roboto_semibold"
+        android:text="@string/kreator_name"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ib_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_90dp"
+        android:background="@drawable/container_circle_white"
+        android:padding="@dimen/margin_10dp"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintBottom_toBottomOf="@id/tv_kreator_name"
+        app:layout_constraintEnd_toStartOf="@id/tv_kreator_name"
+        app:layout_constraintStart_toStartOf="@+id/iv_kreator_image"
+        app:layout_constraintTop_toTopOf="@id/tv_kreator_name" />
+
+    <ImageView
+        android:id="@+id/iv_kreator_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24dp"
+        android:layout_marginTop="@dimen/margin_22dp"
+        android:src="@drawable/kreator_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kreator_name" />
+
+    <TextView
+        android:id="@+id/tv_kreator_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_18dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:text="@string/kreator_full_name"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Large.Bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/iv_check"
+        app:layout_constraintStart_toEndOf="@id/iv_kreator_image"
+        app:layout_constraintTop_toTopOf="@id/iv_kreator_image" />
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:src="@drawable/ic_check"
+        app:layout_constraintBottom_toBottomOf="@id/tv_kreator_full_name"
+        app:layout_constraintStart_toEndOf="@id/tv_kreator_full_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_kreator_full_name" />
+
+    <ImageView
+        android:id="@+id/iv_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_job"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_kreator_job"
+        app:layout_constraintEnd_toStartOf="@id/tv_kreator_job"
+        app:layout_constraintStart_toStartOf="@+id/tv_kreator_full_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_kreator_job" />
+
+    <TextView
+        android:id="@+id/tv_kreator_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:text="@string/kreator_job"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Reguler"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/iv_job"
+        app:layout_constraintTop_toBottomOf="@id/tv_kreator_full_name" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:text="@string/kreator_team"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.Bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_kreator_full_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_kreator_job" />
+
+    <TextView
+        android:id="@+id/tv_label_sesi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:text="@string/label_sesi"
+        app:layout_constraintStart_toStartOf="@id/iv_kreator_image"
+        app:layout_constraintTop_toBottomOf="@id/iv_kreator_image" />
+
+    <TextView
+        android:id="@+id/tv_sesi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_sesi"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_label_sesi"
+        app:layout_constraintStart_toStartOf="@id/tv_label_sesi"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_sesi" />
+
+    <TextView
+        android:id="@+id/tv_label_pengikut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_44dp"
+        android:text="@string/label_pengikut"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_sesi"
+        app:layout_constraintStart_toEndOf="@id/tv_label_sesi"
+        app:layout_constraintTop_toTopOf="@id/tv_label_sesi" />
+
+    <TextView
+        android:id="@+id/tv_pengikut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_pengikut"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_label_pengikut"
+        app:layout_constraintStart_toStartOf="@id/tv_label_pengikut"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_pengikut" />
+
+    <TextView
+        android:id="@+id/tv_label_penilaian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_44dp"
+        android:text="@string/label_penilaian"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_pengikut"
+        app:layout_constraintStart_toEndOf="@id/tv_label_pengikut"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_pengikut" />
+
+    <ImageView
+        android:id="@+id/iv_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_penilaian"
+        app:layout_constraintEnd_toStartOf="@+id/tv_penilaian"
+        app:layout_constraintStart_toStartOf="@+id/tv_label_penilaian"
+        app:layout_constraintTop_toTopOf="@id/tv_penilaian" />
+
+    <TextView
+        android:id="@+id/tv_penilaian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_penilaian"
+        android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_label_penilaian"
+        app:layout_constraintStart_toEndOf="@id/iv_star"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_penilaian" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_kreator_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_24dp"
+        android:layout_marginTop="@dimen/margin_28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sesi">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_informasi" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_publik" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_privat" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_ulasan" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_kreator_profile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tl_kreator_profile" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_jadwal_tersedia"
+        android:title="@string/label_jadwal_tersedia" />
+    <item
+        android:id="@+id/item_request_jadwal"
+        android:title="@string/label_request_jadwal" />
+
+</menu>
