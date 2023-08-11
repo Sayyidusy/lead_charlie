@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_shape"
+    tools:context=".ui.kreator.kreator_home.permintaan_jadwal.tolak.TolakFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_label_konfirmasi_pembatalan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24dp"
+        android:layout_marginTop="@dimen/margin_32dp"
+        android:background="@color/white"
+        android:gravity="start|center_vertical"
+        android:text="@string/label_konfirmasi_pembatalan"
+        android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.Small.Bold"
+        android:textColor="@color/text_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32dp"
+        android:layout_marginEnd="@dimen/margin_24dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg_custom_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_kirim"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:checkedButton="@id/rb_opsi1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_konfirmasi_pembatalan">
+
+        <RadioButton
+            android:id="@+id/rb_opsi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="@dimen/margin_16dp"
+            android:text="@string/opsi_1"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.Small.Reguler"
+            android:textColor="@color/text_black" />
+
+        <RadioButton
+            android:id="@+id/rb_opsi2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24dp"
+            android:layout_marginTop="@dimen/margin_22dp"
+            android:drawablePadding="@dimen/margin_12dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="@dimen/margin_16dp"
+            android:text="@string/opsi_2"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.Small.Reguler"
+            android:textColor="@color/text_black" />
+
+        <RadioButton
+            android:id="@+id/rb_opsi3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24dp"
+            android:layout_marginTop="@dimen/margin_22dp"
+            android:drawablePadding="@dimen/margin_12dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="@dimen/margin_16dp"
+            android:text="@string/opsi_3"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.Small.Reguler"
+            android:textColor="@color/text_black" />
+
+        <RadioButton
+            android:id="@+id/rb_opsi4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24dp"
+            android:layout_marginTop="@dimen/margin_22dp"
+            android:drawablePadding="@dimen/margin_12dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="@dimen/margin_16dp"
+            android:text="@string/opsi_4"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.Small.Reguler"
+            android:textColor="@color/text_black" />
+
+        <RadioButton
+            android:id="@+id/rb_opsi5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24dp"
+            android:layout_marginTop="@dimen/margin_22dp"
+            android:drawablePadding="@dimen/margin_12dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="@dimen/margin_16dp"
+            android:text="@string/opsi_5"
+            android:textAppearance="@style/TextAppearance.DinotisOriginal.Body.Small.Reguler"
+            android:textColor="@color/text_black" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_kirim"
+        style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_24dp"
+        android:layout_marginBottom="@dimen/margin_24dp"
+        android:background="@drawable/button_light_purple"
+        android:text="@string/label_kirim"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

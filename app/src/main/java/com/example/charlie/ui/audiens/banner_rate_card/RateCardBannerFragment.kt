@@ -30,6 +30,9 @@ class RateCardBannerFragment : Fragment() {
             btnBeliRateCard.setOnClickListener {
                 navigateBack()
             }
+            ibBack.setOnClickListener {
+                navigateBack()
+            }
             btnDeskripsiRateCard.setOnClickListener {
                 DeskripsiFragment().show(childFragmentManager, "DeskripsiFragment")
             }

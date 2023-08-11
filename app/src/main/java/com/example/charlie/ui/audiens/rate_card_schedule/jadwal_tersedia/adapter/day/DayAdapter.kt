@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.example.charlie.databinding.ItemDayBinding
 
-class DayAdapter():ListAdapter<DayItemModel, DayViewHolder>(DayDiffUtil()) {
+class DayAdapter(private val listener:DayListener):ListAdapter<DayItemModel, DayViewHolder>(DayDiffUtil()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DayViewHolder {
         return DayViewHolder(
             ItemDayBinding.inflate(
@@ -15,6 +15,10 @@ class DayAdapter():ListAdapter<DayItemModel, DayViewHolder>(DayDiffUtil()) {
     }
 
     override fun onBindViewHolder(holder: DayViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position),listener)
+    }
+
+    interface DayListener {
+        fun onItemClicked(data: DayItemModel)
     }
 }

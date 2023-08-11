@@ -25,11 +25,17 @@ class KreatorProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.apply {
+            ibBack.setOnClickListener{
+                navigateBack()
+            }
+        }
         setupPager()
     }
 
-
+    private fun navigateBack() {
+        findNavController().popBackStack()
+    }
     private fun setupPager() {
         binding.apply {
             vpKreatorProfile.adapter = KreatorProfilePagerAdapter(childFragmentManager, lifecycle)

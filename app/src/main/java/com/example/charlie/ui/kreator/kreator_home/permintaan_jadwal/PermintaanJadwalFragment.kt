@@ -11,13 +11,15 @@ import com.example.charlie.data.firebase.RateCardClient
 import com.example.charlie.data.model.RequestRateCard
 import com.example.charlie.databinding.FragmentPermintaanJadwalBinding
 import com.example.charlie.ui.kreator.kreator_home.permintaan_jadwal.adapter.RequestAdapter
+import com.example.charlie.ui.kreator.kreator_home.permintaan_jadwal.terima.TerimaFragment
+import com.example.charlie.ui.kreator.kreator_home.permintaan_jadwal.tolak.TolakFragment
 
-class PermintaanJadwalFragment : Fragment() {
+class PermintaanJadwalFragment : Fragment(), RequestAdapter.RequestListener {
     private var _binding: FragmentPermintaanJadwalBinding? = null
     private val binding get() = _binding!!
 
     private val mRequestAdapter: RequestAdapter by lazy {
-        RequestAdapter()
+        RequestAdapter(this)
     }
 
     override fun onCreateView(
@@ -57,6 +59,14 @@ class PermintaanJadwalFragment : Fragment() {
             rvRequestRateCard.layoutManager = LinearLayoutManager(requireContext())
             rvRequestRateCard.adapter = mRequestAdapter
         }
+    }
+
+    override fun onItemTerimaClicked(requestID: String) {
+        TerimaFragment.newInstance(requestID).show(childFragmentManager, "TerimaFragment")
+    }
+
+    override fun onItemTolakClicked(requestID: String) {
+        TolakFragment.newInstance(requestID).show(childFragmentManager, "TolakFragment")
     }
 
 }

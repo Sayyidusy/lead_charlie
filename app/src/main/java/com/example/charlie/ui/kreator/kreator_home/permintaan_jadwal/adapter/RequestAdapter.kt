@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.ListAdapter
 import com.example.charlie.data.model.RequestRateCard
 import com.example.charlie.databinding.ItemRequestRateCardBinding
 
-class RequestAdapter:ListAdapter<RequestRateCard,RequestViewHolder>(RequestDiffUtil()) {
+class RequestAdapter(private val listener: RequestListener) :
+    ListAdapter<RequestRateCard, RequestViewHolder>(RequestDiffUtil()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RequestViewHolder {
         return RequestViewHolder(
             ItemRequestRateCardBinding.inflate(
@@ -16,7 +17,12 @@ class RequestAdapter:ListAdapter<RequestRateCard,RequestViewHolder>(RequestDiffU
     }
 
     override fun onBindViewHolder(holder: RequestViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position),listener)
+    }
+
+    interface RequestListener {
+        fun onItemTerimaClicked(requestID: String)
+        fun onItemTolakClicked(requestID: String)
     }
 
 }

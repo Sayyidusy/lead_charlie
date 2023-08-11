@@ -16,8 +16,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_requester_image"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="@dimen/width_45dp"
+            android:layout_height="@dimen/height_45dp"
             android:background="@drawable/container_circle_white"
             android:clipToOutline="true"
             android:src="@drawable/requester_image"

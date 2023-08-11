@@ -18,7 +18,7 @@ import java.util.Locale
 
 class RequestJadwalFragment() : Fragment() {
     companion object {
-        const val RATE_CARD_ID = "rate_card_id"
+        private const val RATE_CARD_ID = "rate_card_id"
         fun newInstance(id: String): RequestJadwalFragment {
             val fragment = RequestJadwalFragment()
             val bundle = Bundle()
@@ -34,6 +34,7 @@ class RequestJadwalFragment() : Fragment() {
     private val rateCardId by lazy {
         arguments?.getString(JadwalTersediaFragment.RATE_CARD_ID)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -74,10 +75,8 @@ class RequestJadwalFragment() : Fragment() {
                 } else {
                     Toast.makeText(
                         requireContext(),
-                        "Masukkan Tanggal dan Waktu",
-                        Toast.LENGTH_SHORT
-                    )
-                        .show()
+                        "Masukkan Tanggal dan Waktu", Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }

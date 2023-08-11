@@ -10,6 +10,7 @@ import com.example.charlie.databinding.ItemRequestRateCardBinding
 class RequestViewHolder(val binding: ItemRequestRateCardBinding) : ViewHolder(binding.root) {
     fun bind(
         model: RequestRateCard,
+        listener : RequestAdapter.RequestListener
     ) {
         RateCardClient().getRateCard(model.rate_card_id.toString()).addOnSuccessListener {
             val rateCard: RateCard = it.toObject(RateCard::class.java)!!
@@ -20,36 +21,38 @@ class RequestViewHolder(val binding: ItemRequestRateCardBinding) : ViewHolder(bi
                 tvDate.text = model.date
                 tvTime.text = model.time
                 btnTerima.setOnClickListener {
-                    RateCardClient().updateRequestStatus(model.id.toString(), "ACCEPTED")
-                        .addOnSuccessListener {
-                            Toast.makeText(
-                                binding.root.context,
-                                "Permintaan diterima",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }.addOnFailureListener {
-                            Toast.makeText(
-                                binding.root.context,
-                                "Gagal mengubah status",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
+                    listener.onItemTerimaClicked(model.id.toString())
+//                    RateCardClient().updateRequestStatus(model.id.toString(), "ACCEPTED")
+//                        .addOnSuccessListener {
+//                            Toast.makeText(
+//                                binding.root.context,
+//                                "Permintaan diterima",
+//                                Toast.LENGTH_SHORT
+//                            ).show()
+//                        }.addOnFailureListener {
+//                            Toast.makeText(
+//                                binding.root.context,
+//                                "Gagal mengubah status",
+//                                Toast.LENGTH_SHORT
+//                            ).show()
+//                        }
                 }
                 btnTolak.setOnClickListener {
-                    RateCardClient().updateRequestStatus(model.id.toString(), "REJECTED")
-                        .addOnSuccessListener {
-                            Toast.makeText(
-                                binding.root.context,
-                                "Permintaan ditolak",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }.addOnFailureListener {
-                            Toast.makeText(
-                                binding.root.context,
-                                "Gagal mengubah status",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
+                    listener.onItemTolakClicked(model.id.toString())
+//                    RateCardClient().updateRequestStatus(model.id.toString(), "REJECTED")
+//                        .addOnSuccessListener {
+//                            Toast.makeText(
+//                                binding.root.context,
+//                                "Permintaan ditolak",
+//                                Toast.LENGTH_SHORT
+//                            ).show()
+//                        }.addOnFailureListener {
+//                            Toast.makeText(
+//                                binding.root.context,
+//                                "Gagal mengubah status",
+//                                Toast.LENGTH_SHORT
+//                            ).show()
+//                        }
                 }
             }
         }

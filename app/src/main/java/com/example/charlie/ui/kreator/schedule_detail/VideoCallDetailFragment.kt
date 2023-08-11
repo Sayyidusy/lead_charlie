@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.charlie.data.firebase.RateCardClient
 import com.example.charlie.data.model.RateCard
 import com.example.charlie.data.model.RequestRateCard
 import com.example.charlie.databinding.FragmentVideoCallDetailBinding
-import com.google.firebase.firestore.ktx.toObject
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -20,7 +20,7 @@ class VideoCallDetailFragment : Fragment() {
     private var _binding: FragmentVideoCallDetailBinding? = null
     private val binding get() = _binding!!
 
-    private val mArgs : VideoCallDetailFragmentArgs by navArgs()
+    private val mArgs: VideoCallDetailFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,37 +33,47 @@ class VideoCallDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.apply {
+            ibBack.setOnClickListener {
+                navigateBack()
+            }
+        }
         loadData()
+    }
+
+    private fun navigateBack() {
+        findNavController().popBackStack()
     }
 
     private fun loadData() {
         val requestId = mArgs.requestId
-        RateCardClient().getRequest(requestId).addOnSuccessListener {requestDoc->
+        RateCardClient().getRequest(requestId).addOnSuccessListener { requestDoc ->
             val requestData = requestDoc.toObject(RequestRateCard::class.java)
-            RateCardClient().getRateCard(requestData?.rate_card_id!!).addOnSuccessListener { rateCardDoc ->
-                val rateCardData = rateCardDoc.toObject(RateCard::class.java)
-                val timeEnd: String = calculateTimeEnd(requestData.time, rateCardData?.duration)
-                val fullDate = getStringDate(requestData.date)
-                binding.apply {
-                    tvTitleRateCard.text = rateCardData?.title
-                    tvDescriptionRateCard.text = rateCardData?.desc
-                    tvDate.text = fullDate
-                    tvTimeStart.text = requestData.time
-                    tvTimeEnd.text = timeEnd
-                    tvPrice.text = rateCardData?.price.toString()
+            RateCardClient().getRateCard(requestData?.rate_card_id!!)
+                .addOnSuccessListener { rateCardDoc ->
+                    val rateCardData = rateCardDoc.toObject(RateCard::class.java)
+                    val timeEnd: String = calculateTimeEnd(requestData.time, rateCardData?.duration)
+                    val fullDate = getStringDate(requestData.date)
+                    binding.apply {
+                        tvTitleRateCard.text = rateCardData?.title
+                        tvDescriptionRateCard.text = rateCardData?.desc
+                        tvDate.text = fullDate
+                        tvTimeStart.text = requestData.time
+                        tvTimeEnd.text = timeEnd
+                        tvPrice.text = rateCardData?.price.toString()
+                    }
                 }
-            }
         }
     }
 
     private fun getStringDate(date: String?): String {
         val formatter = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-        val dateFormatted : Date? = formatter.parse(date!!)
+        val dateFormatted: Date? = formatter.parse(date!!)
 
         val calender = Calendar.getInstance()
         calender.time = dateFormatted!!
 
-        val dayName = when(calender.get(Calendar.DAY_OF_WEEK)){
+        val dayName = when (calender.get(Calendar.DAY_OF_WEEK)) {
             1 -> "Minggu"
             2 -> "Senin"
             3 -> "Selasa"
@@ -74,7 +84,7 @@ class VideoCallDetailFragment : Fragment() {
             else -> "Minggu"
         }
 
-        val monthName = when(calender.get(Calendar.MONTH)){
+        val monthName = when (calender.get(Calendar.MONTH)) {
             0 -> "Januari"
             1 -> "Februari"
             2 -> "Maret"

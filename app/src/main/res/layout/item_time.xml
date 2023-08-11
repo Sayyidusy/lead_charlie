@@ -5,12 +5,12 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/margin_16dp"
-    android:background="@drawable/btn_jam_outline"
+    android:background="@drawable/time_background_selector"
     android:paddingHorizontal="@dimen/margin_24dp"
     android:layout_marginEnd="@dimen/margin_20dp"
     android:paddingVertical="@dimen/margin_12dp"
     android:clickable="true"
     android:textAppearance="@style/TextAppearance.Dinotis.Body.Small.SemiBold"
-    android:textColor="@color/black"
+    android:textColor="@drawable/text_color_selector"
     tools:text="08.30" />
 

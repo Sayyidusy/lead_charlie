@@ -76,4 +76,15 @@
     <string name="label_mulai_sekarang">Mulai Sekarang</string>
     <string name="label_publik">Publik</string>
     <string name="label_privat">Privat</string>
+    <string name="label_agustus_2023">Agustus 2023</string>
+    <string name="desc_terima">Jangan lupa tentukan jadwal bareng Audience-mu ya, pembatalan otomatis jika tidak ada konfirmasi dalam 2x24jam.</string>
+    <string name="label_konfirmasi_penerimaan">Konfirmasi Penerimaan</string>
+    <string name="label_kirim">Kirim</string>
+    <string name="label_konfirmasi_pembatalan">Konfirmasi Pembatalan</string>
+    <string name="opsi_1">Saya tidak tersedia sementara waktu</string>
+    <string name="opsi_2">Saya terlalu banyak menerima permintaan</string>
+    <string name="opsi_3">Saya ingin mengubah harga permintaan</string>
+    <string name="opsi_4">Orang tersebut pernah mengancam saya</string>
+    <string name="opsi_5">Lainnya</string>
+    <string name="label_pilih_hari_tanggal">Pilih hari/tanggal</string>
 </resources>

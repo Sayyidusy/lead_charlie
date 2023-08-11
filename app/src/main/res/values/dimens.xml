@@ -88,6 +88,8 @@
     <dimen name="width_48dp">48dp</dimen>
     <dimen name="height_40dp">40dp</dimen>
     <dimen name="width_40dp">40dp</dimen>
+    <dimen name="width_45dp">45dp</dimen>
+    <dimen name="height_45dp">45dp</dimen>
 
 
 </resources>

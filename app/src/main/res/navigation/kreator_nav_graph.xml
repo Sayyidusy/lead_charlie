@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_kreator_home" >
         <action
             android:id="@+id/action_kreatorHomeFragment_to_videoCallDetailFragment"
-            app:destination="@id/videoCallDetailFragment" />
+            app:destination="@id/videoCallDetailFragment"
+            app:popUpTo="@id/kreatorHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/videoCallDetailFragment"

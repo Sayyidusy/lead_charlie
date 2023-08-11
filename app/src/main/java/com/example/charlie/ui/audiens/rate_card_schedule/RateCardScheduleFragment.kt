@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
@@ -33,11 +34,17 @@ class RateCardScheduleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.apply {
+            ibBack.setOnClickListener {
+                navigateBack()
+            }
+        }
         setupPager()
         loadData()
     }
-
+    private fun navigateBack() {
+        findNavController().popBackStack()
+    }
     private fun loadData() {
         val rateCardId = mArgs.rateCardId
         RateCardClient().getRateCard(rateCardId).addOnSuccessListener {
