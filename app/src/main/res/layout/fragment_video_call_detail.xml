@@ -42,7 +42,7 @@
         android:background="@drawable/container_white_corner_6"
         android:drawableStart="@drawable/ic_chat"
         android:drawableEnd="@drawable/arrow_right_black"
-        android:drawablePadding="@dimen/margin_5dp"
+        android:drawablePadding="@dimen/margin_8dp"
         android:gravity="start|center_vertical"
         android:paddingHorizontal="@dimen/margin_12dp"
         android:paddingVertical="@dimen/margin_14dp"

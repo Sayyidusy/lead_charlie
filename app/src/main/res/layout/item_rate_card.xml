@@ -19,7 +19,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/container_white"
-            android:elevation="2dp"
             android:padding="@dimen/margin_12dp"
             android:src="@drawable/ic_red_camera_video"
             app:layout_constraintStart_toStartOf="parent"

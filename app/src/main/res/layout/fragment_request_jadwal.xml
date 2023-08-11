@@ -1,129 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.audiens.rate_card_schedule.request_jadwal.RequestJadwalFragment"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.audiens.rate_card_schedule.request_jadwal.RequestJadwalFragment">
 
-    <androidx.core.widget.NestedScrollView
+    <TextView
+        android:id="@+id/tv_tanggal"
+        style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:text="@string/label_tanggal"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_tanggal"
+        style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_tanggal"
-                style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_22dp"
-                android:layout_marginTop="@dimen/margin_20dp"
-                android:text="@string/label_tanggal"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:background="@drawable/container_lightgrey"
+        android:paddingHorizontal="@dimen/margin_33dp"
+        android:text="@string/label_pilih_tanggal"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tanggal" />
 
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_tanggal"
-                style="@style/TextAppearance.Dinotis.Body.Small.Reguler"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_22dp"
-                android:layout_marginTop="@dimen/margin_12dp"
-                android:background="@drawable/container_lightgrey"
-                android:paddingHorizontal="@dimen/margin_33dp"
-                android:text="@string/label_pilih_tanggal"
-                android:textAlignment="textStart"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_tanggal" />
+    <TextView
+        android:id="@+id/tv_label_jam"
+        style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:text="@string/label_jam"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_tanggal" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_waktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@id/btn_booking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_jam"
+        app:layout_constraintVertical_chainStyle="spread_inside">
 
-            <TextView
-                android:id="@+id/tv_label_jam"
-                style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_22dp"
-                android:layout_marginTop="@dimen/margin_20dp"
-                android:text="@string/label_jam"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btn_tanggal" />
+        <TextView
+            android:id="@+id/tv_jam"
+            style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_lightgrey"
+            android:paddingHorizontal="@dimen/margin_30dp"
+            android:paddingVertical="@dimen/margin_10dp"
+            android:text="@string/default_jam_00"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_waktu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_22dp"
-                android:layout_marginTop="@dimen/margin_12dp"
-                android:clickable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_label_jam">
+        <TextView
+            android:id="@+id/tv_colon"
+            style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:text="@string/colon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_menit"
+            app:layout_constraintStart_toEndOf="@id/tv_jam"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tv_jam"
-                    style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/container_lightgrey"
-                    android:paddingHorizontal="@dimen/margin_30dp"
-                    android:paddingVertical="@dimen/margin_10dp"
-                    android:text="@string/default_jam_00"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_menit"
+            style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:background="@drawable/container_lightgrey"
+            android:paddingHorizontal="@dimen/margin_30dp"
+            android:paddingVertical="@dimen/margin_10dp"
+            android:text="@string/default_menit_00"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_colon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/tv_colon"
-                    style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_5dp"
-                    android:text="@string/colon"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/tv_menit"
-                    app:layout_constraintStart_toEndOf="@id/tv_jam"
-                    app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_booking"
+        style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:background="@drawable/button_purple"
+        android:text="@string/label_booking"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_waktu" />
 
-                <TextView
-                    android:id="@+id/tv_menit"
-                    style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_5dp"
-                    android:background="@drawable/container_lightgrey"
-                    android:paddingHorizontal="@dimen/margin_30dp"
-                    android:paddingVertical="@dimen/margin_10dp"
-                    android:text="@string/default_menit_00"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/tv_colon"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_booking"
-                style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_22dp"
-                android:layout_marginTop="@dimen/margin_30dp"
-                android:layout_marginBottom="@dimen/margin_16dp"
-                android:background="@drawable/button_purple"
-                android:text="@string/label_booking"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cl_waktu" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

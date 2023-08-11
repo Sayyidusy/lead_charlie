@@ -7,24 +7,24 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.JadwalTersediaFragment
 import com.example.charlie.ui.audiens.rate_card_schedule.request_jadwal.RequestJadwalFragment
 
-class RateCardPagerAdapter(fm: FragmentManager, lifecycle: Lifecycle) :
+class RateCardPagerAdapter(fm: FragmentManager, lifecycle: Lifecycle, private val rateCardID: String) :
     FragmentStateAdapter(fm, lifecycle) {
     override fun getItemCount(): Int {
         return 2
     }
-
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> {
-                JadwalTersediaFragment()
+                JadwalTersediaFragment.newInstance(rateCardID)
             }
+
             1 -> {
-                RequestJadwalFragment()
+                RequestJadwalFragment.newInstance(rateCardID)
             }
+
             else -> {
-                JadwalTersediaFragment()
+                JadwalTersediaFragment.newInstance(rateCardID)
             }
         }
     }
-
 }

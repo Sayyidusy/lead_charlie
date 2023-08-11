@@ -1,7 +1,5 @@
 package com.example.charlie.ui.audiens.rate_card_schedule.request_jadwal
 
-import android.R
-import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
@@ -13,15 +11,29 @@ import androidx.fragment.app.Fragment
 import com.example.charlie.data.firebase.RateCardClient
 import com.example.charlie.data.model.RequestRateCard
 import com.example.charlie.databinding.FragmentRequestJadwalBinding
+import com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.JadwalTersediaFragment
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
-class RequestJadwalFragment : Fragment() {
-    private var _binding: FragmentRequestJadwalBinding? = null
+class RequestJadwalFragment() : Fragment() {
+    companion object {
+        const val RATE_CARD_ID = "rate_card_id"
+        fun newInstance(id: String): RequestJadwalFragment {
+            val fragment = RequestJadwalFragment()
+            val bundle = Bundle()
+            bundle.putString(RATE_CARD_ID, id)
+            fragment.arguments = bundle
+            return fragment
+        }
+    }
 
+    private var _binding: FragmentRequestJadwalBinding? = null
     private val binding get() = _binding!!
 
+    private val rateCardId by lazy {
+        arguments?.getString(JadwalTersediaFragment.RATE_CARD_ID)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,8 +55,7 @@ class RequestJadwalFragment : Fragment() {
             btnBooking.setOnClickListener {
                 if (!(btnTanggal.text == "Pilih Tanggal")) {
                     val newRequest = RequestRateCard(
-                        //ganti dengan id model rate card yang dipilih
-                        rate_card_id = "ljsFAMfo47FDCBIWyD8C",
+                        rate_card_id = rateCardId,
                         date = formatDate(btnTanggal.text.toString()),
                         time = "${tvJam.text}.${tvMenit.text}",
                         status = "PENDING"
@@ -60,8 +71,12 @@ class RequestJadwalFragment : Fragment() {
                         Toast.makeText(requireContext(), "Gagal booking jadwal", Toast.LENGTH_SHORT)
                             .show()
                     }
-                }else{
-                    Toast.makeText(requireContext(), "Masukkan Tanggal dan Waktu", Toast.LENGTH_SHORT)
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Masukkan Tanggal dan Waktu",
+                        Toast.LENGTH_SHORT
+                    )
                         .show()
                 }
             }
@@ -96,7 +111,7 @@ class RequestJadwalFragment : Fragment() {
                 }
             },
             tanggalHariIni.year,
-            tanggalHariIni.monthValue-1,
+            tanggalHariIni.monthValue - 1,
             tanggalHariIni.dayOfMonth
         )
         datePickerDialog.show()

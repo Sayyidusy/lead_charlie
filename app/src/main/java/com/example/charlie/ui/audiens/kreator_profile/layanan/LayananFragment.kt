@@ -23,9 +23,6 @@ class LayananFragment : Fragment(), RateCardAdapter.RateCardItemListener {
     private val mRateCardAdapter by lazy {
         RateCardAdapter(this)
     }
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -49,27 +49,25 @@ class RateCardScheduleFragment : Fragment() {
                 tvField.text = data.field
                 tvKreatorName.text = data.creator_name
                 tvDuration.text = data.duration.toString()
-                Glide.with(requireContext()).load(data.image).transform(CenterCrop(), RoundedCorners(10)).into(ivRateCard)
+                Glide.with(requireContext()).load(data.image)
+                    .transform(CenterCrop(), RoundedCorners(10)).into(ivRateCard)
             }
         }
     }
 
     private fun setupPager() {
         binding.apply {
-            vpRateCardSchedule.adapter = RateCardPagerAdapter(childFragmentManager, lifecycle)
+            vpRateCardSchedule.adapter = RateCardPagerAdapter(childFragmentManager, lifecycle,mArgs.rateCardId)
             tlRateCard.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
                 override fun onTabSelected(tab: TabLayout.Tab) {
                     vpRateCardSchedule.currentItem = tab.position
                 }
-
                 override fun onTabUnselected(tab: TabLayout.Tab?) {
-//                    vpRateCardSchedule.currentItem = tab!!.position
+                    vpRateCardSchedule.currentItem = tab!!.position
                 }
-
                 override fun onTabReselected(tab: TabLayout.Tab?) {
-//                    vpRateCardSchedule.currentItem = tab!!.position
+                    vpRateCardSchedule.currentItem = tab!!.position
                 }
-
             })
         }
     }

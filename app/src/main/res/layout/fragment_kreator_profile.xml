@@ -185,12 +185,12 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_sesi" />
+            android:text="@string/label_publik" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_layanan" />
+            android:text="@string/label_privat" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

@@ -74,4 +74,6 @@
     <string name="label_edit">Edit</string>
     <string name="label_peserta_private_call">Peserta Private Call</string>
     <string name="label_mulai_sekarang">Mulai Sekarang</string>
+    <string name="label_publik">Publik</string>
+    <string name="label_privat">Privat</string>
 </resources>
