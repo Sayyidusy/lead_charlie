@@ -1,4 +1,4 @@
-package com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.adapter.day
+package com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.month.adapter.day
 
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.charlie.databinding.ItemDayBinding

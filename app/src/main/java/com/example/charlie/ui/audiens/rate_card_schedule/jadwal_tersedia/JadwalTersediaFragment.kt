@@ -5,22 +5,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.charlie.data.firebase.RateCardClient
 import com.example.charlie.data.model.RateCard
 import com.example.charlie.databinding.FragmentJadwalTersediaBinding
-import com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.adapter.day.DayAdapter
-import com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.adapter.day.DayItemModel
+import com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.month.adapter.MonthPagerAdapter
 import com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.adapter.time.TimeAdapter
 import com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.adapter.time.TimeItemModel
-import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.Date
-import java.util.Locale
 
 class JadwalTersediaFragment() : Fragment() {
     companion object {
@@ -39,9 +32,6 @@ class JadwalTersediaFragment() : Fragment() {
     private val rateCardId by lazy {
         arguments?.getString(RATE_CARD_ID)
     }
-    private val mDayAdapter by lazy {
-        DayAdapter()
-    }
     private val mTimeAdapter by lazy {
         TimeAdapter()
     }
@@ -57,32 +47,73 @@ class JadwalTersediaFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupAdapterDay()
         setupAdapterTime()
         loadData()
+        setupPager()
+    }
+
+    private fun setupPager() {
+        RateCardClient().getRateCard(rateCardId!!).addOnSuccessListener {
+            val data = it.toObject(RateCard::class.java)
+            val newData = data?.copy(id = it.id)
+            val activeDatesByMonth: MutableMap<Int, ArrayList<String>> = mutableMapOf()
+
+            newData?.available_dates?.forEach { fullDate ->
+                val dateArray = fullDate.split("/")
+                val date = dateArray[0]
+                val month = dateArray[1]
+
+                if (activeDatesByMonth[month.toInt()] == null) {
+                    activeDatesByMonth[month.toInt()] = arrayListOf()
+                }
+
+                activeDatesByMonth[month.toInt()]?.add(date)
+                Log.d(
+                    "JadwalTersediaFragment",
+                    "loadDataDates: tanggal=${date} bulan=${month} $activeDatesByMonth"
+                )
+            }
+            val listActiveMonths = activeDatesByMonth.keys.toMutableList() as ArrayList<Int>
+            Toast.makeText(
+                requireContext(),
+                "List Months: ${listActiveMonths}, ListActiveDates: $activeDatesByMonth",
+                Toast.LENGTH_LONG
+            ).show()
+            binding.apply {
+                vpDayMonth.adapter =
+                    MonthPagerAdapter(
+                        childFragmentManager,
+                        lifecycle,
+                        listActiveMonths,
+                        activeDatesByMonth
+                    )
+            }
+        }
     }
 
 
     private fun loadData() {
         RateCardClient().getRateCard(rateCardId!!).addOnSuccessListener {
-            val listDay = arrayListOf<DayItemModel>()
             val listTime = arrayListOf<TimeItemModel>()
             val data = it.toObject(RateCard::class.java)
             val newData = data?.copy(id = it.id)
-            newData?.available_dates?.forEach { fullDate ->
-                val dateArray = fullDate.split("/")
-                val date = dateArray[0]
-                val month = dateArray[1]
-                val day = getDay(fullDate)
-                val dayItem = DayItemModel(
-                    day = day,
-                    date = date,
-                    month = month,
-                    isSelected = false,
-                )
-                listDay.add(dayItem)
-            }
-            newData?.available_times?.forEach{ time ->
+
+//            newData?.available_dates?.forEach { fullDate ->
+//                val dateArray = fullDate.split("/")
+//                val date = dateArray[0]
+//                val month = dateArray[1]
+//
+//                if (activeDatesByMonth[month.toInt()] == null) {
+//                    activeDatesByMonth[month.toInt()] = arrayListOf()
+//                }
+//
+//                activeDatesByMonth[month.toInt()]?.add(date)
+//                Log.d(
+//                    "JadwalTersediaFragment",
+//                    "loadDataDates: tanggal=${date} bulan=${month} $activeDatesByMonth"
+//                )
+//            }
+            newData?.available_times?.forEach { time ->
                 val parts = time.split(".")
                 val hour = parts[0].toInt()
                 val minute = parts[1].toInt()
@@ -94,47 +125,17 @@ class JadwalTersediaFragment() : Fragment() {
                 )
                 listTime.add(timeItem)
             }
-            mDayAdapter.submitList(listDay)
             mTimeAdapter.submitList(listTime)
         }.addOnFailureListener {
             Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun getDay(fullDate: String): String {
-        val formatter = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-        val dateFormatted : Date? = formatter.parse(fullDate)
-
-        val calender = Calendar.getInstance()
-        calender.time = dateFormatted!!
-
-        val dayName = when(calender.get(Calendar.DAY_OF_WEEK)){
-            1 -> "Minggu"
-            2 -> "Senin"
-            3 -> "Selasa"
-            4 -> "Rabu"
-            5 -> "Kamis"
-            6 -> "Jumat"
-            7 -> "Sabtu"
-            else -> "Minggu"
-        }
-        return dayName
-    }
-
-    private fun setupAdapterDay() {
-        binding.apply {
-            rvDay.apply {
-                adapter = mDayAdapter
-                layoutManager =
-                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            }
-        }
-    }
     private fun setupAdapterTime() {
         binding.apply {
             rvTime.apply {
                 adapter = mTimeAdapter
-                layoutManager = GridLayoutManager(requireContext(),3)
+                layoutManager = GridLayoutManager(requireContext(), 3)
             }
         }
     }

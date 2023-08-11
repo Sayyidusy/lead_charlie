@@ -14,48 +14,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/ib_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_tanggal"
-                app:layout_constraintStart_toStartOf="@+id/rv_day"
-                app:layout_constraintTop_toTopOf="@+id/tv_tanggal"
-                app:srcCompat="@drawable/arrow_left_black" />
-
-            <TextView
-                android:id="@+id/tv_tanggal"
-                style="@style/TextAppearance.Dinotis.Body.Large.SemiBold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:text="Juli 2023"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/ib_back_right"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_tanggal"
-                app:layout_constraintEnd_toEndOf="@+id/rv_day"
-                app:layout_constraintTop_toTopOf="@+id/tv_tanggal"
-                app:srcCompat="@drawable/arrow_right_black" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_day"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_day_month"
                 android:layout_marginHorizontal="@dimen/margin_20dp"
-                android:layout_marginTop="@dimen/margin_20dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_tanggal" />
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_time"
@@ -64,7 +30,7 @@
                 android:layout_marginHorizontal="@dimen/margin_20dp"
                 android:layout_marginTop="@dimen/margin_20dp"
                 app:spanCount="3"
-                app:layout_constraintTop_toBottomOf="@id/rv_day" />
+                app:layout_constraintTop_toBottomOf="@id/vp_day_month" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_booking"

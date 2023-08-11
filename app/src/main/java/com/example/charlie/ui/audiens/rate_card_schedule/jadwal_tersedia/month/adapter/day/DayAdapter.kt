@@ -1,4 +1,4 @@
-package com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.adapter.day
+package com.example.charlie.ui.audiens.rate_card_schedule.jadwal_tersedia.month.adapter.day
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
